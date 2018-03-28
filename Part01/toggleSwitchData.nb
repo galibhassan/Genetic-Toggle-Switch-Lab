@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     16143,        363]
-NotebookOptionsPosition[     15863,        349]
-NotebookOutlinePosition[     16205,        364]
-CellTagsIndexPosition[     16162,        361]
+NotebookDataLength[     25802,        619]
+NotebookOptionsPosition[     25521,        605]
+NotebookOutlinePosition[     25864,        620]
+CellTagsIndexPosition[     25821,        617]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -48,8 +48,37 @@ Cell[BoxData[
       RowBox[{"importDataFrom", "[", "]"}], " ", 
       RowBox[{"function", "."}]}]}], "\[IndentingNewLine]", "*)"}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   RowBox[{"(*", " ", 
     RowBox[{
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}], ";", "\[IndentingNewLine]", "\t", 
      RowBox[{"In", ":", " ", 
       RowBox[{"filename", " ", 
        RowBox[{"(", 
@@ -81,9 +110,42 @@ Cell[BoxData[
              RowBox[{"-", "2"}]}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
          RowBox[{"Return", "[", "Data", "]"}], ";"}]}], "\[IndentingNewLine]",
         "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", "\[IndentingNewLine]", "\t", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
     RowBox[{
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}]}]}]}]}], ";", "\[IndentingNewLine]", "\t", 
      RowBox[{"In", ":", " ", 
       RowBox[{
        RowBox[{"any", " ", "of", " ", "the", " ", "imported", " ", "data"}], 
@@ -208,7 +270,39 @@ Cell[BoxData[
          "\[IndentingNewLine]", 
          RowBox[{"Return", "[", "timePoints", "]"}], ";"}]}], 
        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ")"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}], 
+      ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{
+        RowBox[{"data", " ", "for", " ", "x"}], "-", "axis"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"data", " ", "for", " ", "y"}], "-", "axis"}], ";", 
+      "\[IndentingNewLine]", "\t", 
+      RowBox[{"Out", ":", " ", 
+       RowBox[{"the", " ", "xy", " ", "plot"}]}], ";"}]}], 
+    "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
      RowBox[{"generateSinglePlot", "[", 
@@ -235,7 +329,12 @@ Cell[BoxData[
              "\[IndentingNewLine]", 
              RowBox[{"PlotStyle", "\[Rule]", 
               RowBox[{"{", 
-               RowBox[{"Black", ",", " ", 
+               RowBox[{
+                RowBox[{"RGBColor", "[", 
+                 RowBox[{
+                  RowBox[{"24", "/", "255"}], ",", 
+                  RowBox[{"161", "/", "255"}], ",", 
+                  RowBox[{"94", "/", "255"}]}], "]"}], ",", " ", 
                 RowBox[{"Thickness", "[", ".01", "]"}]}], "}"}]}]}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"Mesh", "\[Rule]", "All"}], ",", " ", 
@@ -248,42 +347,38 @@ Cell[BoxData[
             RowBox[{"BaseStyle", "\[Rule]", 
              RowBox[{"{", 
               RowBox[{
-               RowBox[{"FontWeight", "\[Rule]", "10"}], ",", 
-               RowBox[{"FontSize", "\[Rule]", "5"}]}], "}"}]}], ",", 
+               RowBox[{"FontWeight", "\[Rule]", "6"}], ",", 
+               RowBox[{"FontSize", "\[Rule]", "Tiny"}]}], "}"}]}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"Frame", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
             RowBox[{"FrameTicks", "\[Rule]", 
              RowBox[{"{", "\[IndentingNewLine]", 
               RowBox[{
                RowBox[{"{", "\[IndentingNewLine]", 
-                RowBox[{
-                 RowBox[{"{", 
-                  RowBox[{"0.1", ",", "0.2"}], "}"}], ",", 
-                 RowBox[{"(*", " ", "left", " ", "*)"}], 
-                 "\[IndentingNewLine]", "None"}], " ", 
+                RowBox[{"None", " ", ",", 
+                 RowBox[{"(*", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0.1", ",", "0.2"}], "}"}], ",", " ", "left"}], 
+                  " ", "*)"}], "\[IndentingNewLine]", "None"}], " ", 
                 RowBox[{"(*", " ", "right", " ", "*)"}], 
                 "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{"{", "\[IndentingNewLine]", "  ", 
                 RowBox[{
                  RowBox[{"{", 
                   RowBox[{"0", ",", 
                    RowBox[{"{", 
-                    RowBox[{"4000", ",", "\"\<4k\>\""}], "}"}], ",", 
-                   RowBox[{"{", 
-                    RowBox[{"8000", ",", "\"\<8k\>\""}], "}"}], ",", 
-                   RowBox[{"{", 
-                    RowBox[{"12000", ",", "\"\<12k\>\""}], "}"}]}], "}"}], 
-                 ",", " ", 
-                 RowBox[{"(*", " ", "bottom", " ", "*)"}], 
-                 "\[IndentingNewLine]", "None"}], " ", 
+                    RowBox[{"8000", ",", "\"\<8k\>\""}], "}"}]}], "}"}], ",", 
+                 RowBox[{"(*", "bottom", " ", "*)"}], "\[IndentingNewLine]", 
+                 "None"}], " ", 
                 RowBox[{"(*", " ", "top", " ", "*)"}], "\[IndentingNewLine]", 
                 "}"}]}], "\[IndentingNewLine]", "}"}]}], ",", 
             "\[IndentingNewLine]", "\[IndentingNewLine]", 
             RowBox[{"FrameStyle", "\[Rule]", 
              RowBox[{"{", "\[IndentingNewLine]", 
               RowBox[{
-               RowBox[{"Thickness", "[", "0.001", "]"}], ",", 
-               RowBox[{"Thickness", "[", "0.001", "]"}], ",", 
+               RowBox[{"Thickness", "[", "0.005", "]"}], ",", 
+               RowBox[{"Thickness", "[", "0.005", "]"}], ",", 
                RowBox[{"Thickness", "[", "0.001", "]"}], ",", 
                RowBox[{"Thickness", "[", "0.001", "]"}]}], 
               "\[IndentingNewLine]", "}"}]}], ",", " ", "\[IndentingNewLine]", 
@@ -291,6 +386,64 @@ Cell[BoxData[
            "]"}]}], ";", "\[IndentingNewLine]", 
          RowBox[{"Return", "[", "plot", "]"}]}]}], "\[IndentingNewLine]", 
        "]"}], "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}]}]}]}]}]}]}]}]}]}]}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{"imported", " ", "dataset"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"the", " ", "column"}], "-", 
+       RowBox[{
+       "number", " ", "of", " ", "which", " ", "the", " ", "plot", " ", "is", 
+        " ", "to", " ", "be", " ", "generated"}]}], ";", 
+      "\[IndentingNewLine]", "\t", 
+      RowBox[{"Out", ":", " ", 
+       RowBox[{
+        RowBox[{"the", " ", "plot", " ", "of", " ", "column"}], "-", 
+        RowBox[{"data", " ", "vs", " ", 
+         RowBox[{"time", "."}]}]}]}]}]}], "\[IndentingNewLine]", "*)"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
@@ -321,7 +474,102 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"Return", "[", "plot", "]"}], ";"}]}], 
         "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
-    ";"}]}]}]], "Input",
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}], 
+      ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{"imported", " ", "data"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"no", ".", " ", "of"}], " ", "rows"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"no", ".", "of"}], " ", "columns"}], ";", 
+      "\[IndentingNewLine]", "\t", 
+      RowBox[{"Out", ":", " ", 
+       RowBox[{
+        RowBox[{"Void", ".", " ", "Creates"}], " ", "a", " ", "pdf", " ", 
+        "in", " ", "my", " ", "documents", " ", 
+        RowBox[{"folder", "."}]}]}]}]}], "\[IndentingNewLine]", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"makePdf", "[", 
+     RowBox[{
+     "importedDataGlobal_", ",", "numberOfRowsGlobal_", ",", 
+      "numberOfColumnsGlobal_"}], " ", "]"}], ":=", 
+    RowBox[{"(", "\[IndentingNewLine]", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", "plotMatrix", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"f", "[", 
+          RowBox[{
+          "importedData_", ",", " ", "numberOfRows_", ",", " ", 
+           "numberOfColumns_"}], "]"}], ":=", 
+         RowBox[{"(", "\[IndentingNewLine]", 
+          RowBox[{"Block", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"graphHolder", ",", "k"}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"k", "=", "4"}], ";", "\[IndentingNewLine]", 
+             RowBox[{"graphHolder", " ", "=", " ", 
+              RowBox[{"Table", "[", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"k", "++"}], ";", 
+                 RowBox[{"generatePlotOfColumn", "[", 
+                  RowBox[{"importedData", ",", "k"}], "]"}]}], ",", " ", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"j", ",", "1", ",", "numberOfColumns"}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", "1", ",", "numberOfRows"}], "}"}]}], 
+               "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"Return", "[", "graphHolder", "]"}], ";"}]}], 
+           "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ")"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"plotMatrix", " ", "=", " ", 
+         RowBox[{"f", "[", 
+          RowBox[{
+          "importedDataGlobal", ",", "numberOfRowsGlobal", ",", " ", 
+           "numberOfColumnsGlobal"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Export", "[", "\[IndentingNewLine]", 
+         RowBox[{"\"\<myPlot.pdf\>\"", ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "GraphicsGrid", "[", "\[IndentingNewLine]", "plotMatrix", 
+           "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
+      "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+     ")"}]}]}]}]], "Input",
  CellChangeTimes->{{3.728851790403798*^9, 3.728851826316852*^9}, 
    3.72885187208747*^9, {3.7288519194421787`*^9, 3.7288519420244703`*^9}, {
    3.7288527266733494`*^9, 3.728852752589832*^9}, {3.7288528259300265`*^9, 
@@ -345,10 +593,18 @@ Cell[BoxData[
    3.7311941322888813`*^9, 3.7311941614085474`*^9}, {3.731194279748316*^9, 
    3.731194373497678*^9}, {3.731194435182206*^9, 3.731194451108117*^9}, {
    3.7311946148024797`*^9, 3.7311946819003177`*^9}, {3.731194728835002*^9, 
-   3.731194730687108*^9}}]
+   3.731194730687108*^9}, {3.731200235807983*^9, 3.7312002368840446`*^9}, {
+   3.7312003465223155`*^9, 3.7312003775710917`*^9}, {3.731200571982211*^9, 
+   3.731200594823518*^9}, {3.731200695726289*^9, 3.7312007036487417`*^9}, {
+   3.7312008271398053`*^9, 3.731200862047802*^9}, {3.7312009267815046`*^9, 
+   3.731200930260703*^9}, {3.7312009648256807`*^9, 3.7312009679578595`*^9}, {
+   3.7312010205538683`*^9, 3.7312010237330494`*^9}, {3.7312011235557594`*^9, 
+   3.731201124864834*^9}, {3.7312012888492136`*^9, 3.7312012916303725`*^9}, {
+   3.731201431052347*^9, 3.7312014636812134`*^9}, {3.7312018306822042`*^9, 
+   3.7312024121224613`*^9}}]
 },
-WindowSize->{704, 822},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
+WindowSize->{1424, 765},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
 ]
@@ -364,7 +620,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 15181, 323, 2132, "Input"]
+Cell[678, 24, 24839, 579, 2892, "Input"]
 }
 ]
 *)
