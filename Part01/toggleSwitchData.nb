@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     33874,        769]
-NotebookOptionsPosition[     33483,        751]
-NotebookOutlinePosition[     33825,        766]
-CellTagsIndexPosition[     33782,        763]
+NotebookDataLength[     33601,        757]
+NotebookOptionsPosition[     33321,        743]
+NotebookOutlinePosition[     33663,        758]
+CellTagsIndexPosition[     33620,        755]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,8 +21,6 @@ Notebook[{
 Cell[BoxData[
  RowBox[{"Quit", "[", "]"}]], "Input",
  CellChangeTimes->{{3.728852797527402*^9, 3.728852799203498*^9}}],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -340,7 +338,7 @@ Cell[BoxData[
              RowBox[{"RGBColor", "[", 
               RowBox[{".5", ",", ".5", ",", ".5"}], "]"}]}], "]"}], "]"}]}], 
          ";", "\[IndentingNewLine]", 
-         RowBox[{"plot", " ", "=", " ", 
+         RowBox[{"plot", " ", "=", 
           RowBox[{"ListLinePlot", "[", "\[IndentingNewLine]", 
            RowBox[{
             RowBox[{"Thread", "[", 
@@ -369,6 +367,8 @@ Cell[BoxData[
                  RowBox[{"132", "/", "255"}], ",", 
                  RowBox[{"147", "/", "255"}]}], "]"}], ",", " ", 
                RowBox[{"Thickness", "[", ".02", "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"Mesh", "\[Rule]", "False"}], ",", " ", 
             "\[IndentingNewLine]", 
@@ -646,10 +646,8 @@ Cell[BoxData[
                   RowBox[{"-", "1830"}]}], "}"}]}], "]"}]}]}], 
             "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ")"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"makePdf", "[", "\[IndentingNewLine]", 
-    RowBox[{"myData", ",", "8", ",", "12"}], "\[IndentingNewLine]", 
-    "]"}]}]}]], "Input",
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.728851790403798*^9, 3.728851826316852*^9}, 
    3.72885187208747*^9, {3.7288519194421787`*^9, 3.7288519420244703`*^9}, {
    3.7288527266733494`*^9, 3.728852752589832*^9}, {3.7288528259300265`*^9, 
@@ -736,20 +734,14 @@ Cell[BoxData[
    3.7312641595409727`*^9}, {3.7312641975781484`*^9, 
    3.7312642380764647`*^9}, {3.7312642761956453`*^9, 3.731264276417658*^9}, {
    3.7312643771014166`*^9, 3.731264420253885*^9}, {3.7312645173134365`*^9, 
-   3.731264569201404*^9}}],
-
-Cell[BoxData["\<\"myPlot.pdf\"\>"], "Output",
- CellChangeTimes->{
-  3.7312640223911285`*^9, {3.7312640636394873`*^9, 3.7312640945802574`*^9}, 
-   3.731264131362361*^9, 3.7312641640462303`*^9, {3.7312642163722234`*^9, 
-   3.731264241803678*^9}, 3.731264280175873*^9, 3.7312644313675203`*^9, {
-   3.7312645488932424`*^9, 3.731264572904616*^9}, 3.7312706490891895`*^9}]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.731263622235241*^9, 3.7312636480177155`*^9}}]
+   3.731264569201404*^9}, {3.7313075747899237`*^9, 3.7313076391726065`*^9}, {
+   3.731307714494915*^9, 3.731307721705327*^9}, 3.7313416117384834`*^9, {
+   3.731341719784273*^9, 3.7313417513899283`*^9}, {3.731348871051193*^9, 
+   3.731348890910028*^9}, {3.7313490927971334`*^9, 3.731349136353625*^9}, {
+   3.7313491931728745`*^9, 3.731349194632958*^9}, {3.731349234264225*^9, 
+   3.731349234414233*^9}}]
 },
-WindowSize->{860, 822},
+WindowSize->{704, 822},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
@@ -766,11 +758,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[CellGroupData[{
-Cell[700, 26, 32301, 712, 3332, "Input"],
-Cell[33004, 740, 366, 5, 31, "Output"]
-}, Open  ]],
-Cell[33385, 748, 94, 1, 31, "Input"]
+Cell[678, 24, 32639, 717, 3472, "Input"]
 }
 ]
 *)
