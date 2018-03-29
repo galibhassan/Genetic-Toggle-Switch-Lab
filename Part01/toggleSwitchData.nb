@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     30310,        696]
-NotebookOptionsPosition[     30030,        682]
-NotebookOutlinePosition[     30372,        697]
-CellTagsIndexPosition[     30329,        694]
+NotebookDataLength[     33874,        769]
+NotebookOptionsPosition[     33483,        751]
+NotebookOutlinePosition[     33825,        766]
+CellTagsIndexPosition[     33782,        763]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,6 +21,8 @@ Notebook[{
 Cell[BoxData[
  RowBox[{"Quit", "[", "]"}]], "Input",
  CellChangeTimes->{{3.728852797527402*^9, 3.728852799203498*^9}}],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -38,6 +40,10 @@ Cell[BoxData[
      "\"\<D:\\\\labs\\\\toggle switch\\\\gitRepo\\\\Part01\\\\\>\""}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
+    RowBox[{"myData", " ", "=", " ", 
+     RowBox[{"importDataFrom", "[", "\"\<OD600.txt\>\"", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"plotRangeInput", " ", "=", " ", 
      RowBox[{"{", 
       RowBox[{
@@ -45,8 +51,11 @@ Cell[BoxData[
         RowBox[{"0", ",", "14000"}], "}"}], ",", 
        RowBox[{"{", 
         RowBox[{"0", ",", ".25"}], "}"}]}], "}"}]}], " ", ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", "\[IndentingNewLine]", "\t", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"plotInfo", " ", "=", " ", "\"\<OD\>\""}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", "\[IndentingNewLine]", "\t", 
     RowBox[{
      RowBox[{
       RowBox[{"Data", " ", "must", " ", "be", " ", "fetched", " ", "from"}], 
@@ -120,7 +129,7 @@ Cell[BoxData[
              RowBox[{"-", "2"}]}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
          RowBox[{"Return", "[", "Data", "]"}], ";"}]}], "\[IndentingNewLine]",
         "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
      RowBox[{"--", 
@@ -342,7 +351,11 @@ Cell[BoxData[
              RowBox[{"{", 
               RowBox[{"0", ",", "0"}], "}"}]}], ",", " ", 
             "\[IndentingNewLine]", 
-            RowBox[{"Axes", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"AxesStyle", "\[Rule]", 
+             RowBox[{"RGBColor", "[", 
+              RowBox[{".3", ",", ".3", ",", ".3"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"Axes", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
             RowBox[{"Ticks", "\[Rule]", "None"}], ",", "\[IndentingNewLine]", 
             "\[IndentingNewLine]", 
             RowBox[{"PlotRange", "\[Rule]", " ", "plotRangeInput"}], ",", 
@@ -352,10 +365,10 @@ Cell[BoxData[
               RowBox[{
                RowBox[{"RGBColor", "[", 
                 RowBox[{
-                 RowBox[{"34", "/", "255"}], ",", 
-                 RowBox[{"34", "/", "255"}], ",", 
-                 RowBox[{"34", "/", "255"}]}], "]"}], ",", " ", 
-               RowBox[{"Thickness", "[", ".03", "]"}]}], "}"}]}], ",", 
+                 RowBox[{"110", "/", "255"}], ",", 
+                 RowBox[{"132", "/", "255"}], ",", 
+                 RowBox[{"147", "/", "255"}]}], "]"}], ",", " ", 
+               RowBox[{"Thickness", "[", ".02", "]"}]}], "}"}]}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"Mesh", "\[Rule]", "False"}], ",", " ", 
             "\[IndentingNewLine]", 
@@ -375,7 +388,7 @@ Cell[BoxData[
                RowBox[{"FontWeight", "\[Rule]", "6"}], ",", 
                RowBox[{"FontSize", "\[Rule]", "Tiny"}]}], "}"}]}], ",", 
             "\[IndentingNewLine]", 
-            RowBox[{"Frame", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Frame", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
             RowBox[{"FrameTicks", "\[Rule]", 
              RowBox[{"{", "\[IndentingNewLine]", 
               RowBox[{
@@ -498,6 +511,12 @@ Cell[BoxData[
             RowBox[{"[", 
              RowBox[{"1", ",", " ", "colNum"}], "]"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"If", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"plotID", " ", "\[Equal]", " ", "\"\<H12\>\""}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"plotID", " ", "=", " ", "\"\<\>\""}]}], 
+           "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
           RowBox[{"arrayAtColNum", " ", "=", "  ", 
            RowBox[{"ToExpression", "[", " ", 
             RowBox[{"Delete", "[", 
@@ -558,57 +577,79 @@ Cell[BoxData[
         RowBox[{"folder", "."}]}]}]}]}], "\[IndentingNewLine]", "*)"}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"makePdf", "[", 
-     RowBox[{
-     "importedDataGlobal_", ",", "numberOfRowsGlobal_", ",", 
-      "numberOfColumnsGlobal_"}], " ", "]"}], ":=", 
-    RowBox[{"(", "\[IndentingNewLine]", 
-     RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"makePdf", "[", 
       RowBox[{
-       RowBox[{"{", "plotMatrix", "}"}], ",", "\[IndentingNewLine]", 
+      "importedDataGlobal_", ",", "numberOfRowsGlobal_", ",", 
+       "numberOfColumnsGlobal_"}], " ", "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{"Block", "[", 
        RowBox[{
+        RowBox[{"{", 
+         RowBox[{"plotMatrix", ",", " ", "label"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
         RowBox[{
-         RowBox[{"f", "[", 
-          RowBox[{
-          "importedData_", ",", " ", "numberOfRows_", ",", " ", 
-           "numberOfColumns_"}], "]"}], ":=", 
-         RowBox[{"(", "\[IndentingNewLine]", 
-          RowBox[{"Block", "[", 
+         RowBox[{
+          RowBox[{"f", "[", 
            RowBox[{
-            RowBox[{"{", 
-             RowBox[{"graphHolder", ",", "k"}], "}"}], ",", 
-            "\[IndentingNewLine]", 
+           "importedData_", ",", " ", "numberOfRows_", ",", " ", 
+            "numberOfColumns_"}], "]"}], ":=", 
+          RowBox[{"(", "\[IndentingNewLine]", 
+           RowBox[{"Block", "[", 
             RowBox[{
-             RowBox[{"k", "=", "3"}], ";", "\[IndentingNewLine]", 
-             RowBox[{"graphHolder", " ", "=", " ", 
-              RowBox[{"Table", "[", "\[IndentingNewLine]", 
-               RowBox[{
+             RowBox[{"{", 
+              RowBox[{"graphHolder", ",", "k"}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"k", "=", "3"}], ";", "\[IndentingNewLine]", 
+              RowBox[{"graphHolder", " ", "=", " ", 
+               RowBox[{"Table", "[", "\[IndentingNewLine]", 
                 RowBox[{
-                 RowBox[{"k", "++"}], ";", 
-                 RowBox[{"generatePlotOfColumn", "[", 
-                  RowBox[{"importedData", ",", "k"}], "]"}]}], ",", " ", 
-                "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"k", "++"}], ";", 
+                  RowBox[{"generatePlotOfColumn", "[", 
+                   RowBox[{"importedData", ",", "k"}], "]"}]}], ",", " ", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"i", ",", "1", ",", "numberOfRows"}], "}"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"j", ",", "1", ",", "numberOfColumns"}], "}"}]}], 
+                "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"Return", "[", "graphHolder", "]"}], ";"}]}], 
+            "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ")"}]}], ";",
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"plotMatrix", " ", "=", " ", 
+          RowBox[{"f", "[", 
+           RowBox[{
+           "importedDataGlobal", ",", "numberOfRowsGlobal", ",", " ", 
+            "numberOfColumnsGlobal"}], "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"label", " ", "=", " ", 
+          RowBox[{"Text", "[", 
+           RowBox[{"Style", "[", 
+            RowBox[{"plotInfo", ",", "6", ",", " ", 
+             RowBox[{"RGBColor", "[", 
+              RowBox[{
+               RowBox[{"221", "/", "255"}], ",", 
+               RowBox[{"81", "/", "255"}], ",", 
+               RowBox[{"69", "/", "255"}]}], "]"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Export", "[", "\[IndentingNewLine]", 
+          RowBox[{"\"\<myPlot.pdf\>\"", ",", "\[IndentingNewLine]", 
+           RowBox[{"GraphicsGrid", "[", "\[IndentingNewLine]", 
+            RowBox[{"plotMatrix", ",", "\[IndentingNewLine]", 
+             RowBox[{"Epilog", "\[Rule]", 
+              RowBox[{"Inset", "[", 
+               RowBox[{"label", ",", " ", 
                 RowBox[{"{", 
-                 RowBox[{"i", ",", "1", ",", "numberOfRows"}], "}"}], ",", 
-                "\[IndentingNewLine]", 
-                RowBox[{"{", 
-                 RowBox[{"j", ",", "1", ",", "numberOfColumns"}], "}"}]}], 
-               "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
-             RowBox[{"Return", "[", "graphHolder", "]"}], ";"}]}], 
-           "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ")"}]}], ";", 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"plotMatrix", " ", "=", " ", 
-         RowBox[{"f", "[", 
-          RowBox[{
-          "importedDataGlobal", ",", "numberOfRowsGlobal", ",", " ", 
-           "numberOfColumnsGlobal"}], "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"Export", "[", "\[IndentingNewLine]", 
-         RowBox[{"\"\<myPlot.pdf\>\"", ",", "\[IndentingNewLine]", 
-          RowBox[{
-          "GraphicsGrid", "[", "\[IndentingNewLine]", "plotMatrix", 
-           "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-      "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
-     ")"}]}]}]}]], "Input",
+                 RowBox[{"4480", ",", 
+                  RowBox[{"-", "1830"}]}], "}"}]}], "]"}]}]}], 
+            "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
+       "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ")"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"makePdf", "[", "\[IndentingNewLine]", 
+    RowBox[{"myData", ",", "8", ",", "12"}], "\[IndentingNewLine]", 
+    "]"}]}]}]], "Input",
  CellChangeTimes->{{3.728851790403798*^9, 3.728851826316852*^9}, 
    3.72885187208747*^9, {3.7288519194421787`*^9, 3.7288519420244703`*^9}, {
    3.7288527266733494`*^9, 3.728852752589832*^9}, {3.7288528259300265`*^9, 
@@ -678,7 +719,35 @@ Cell[BoxData[
    3.7312622325507555`*^9}, {3.73126227966745*^9, 3.7312622929832115`*^9}, {
    3.731262326921153*^9, 3.7312623304673557`*^9}, {3.7312623697146006`*^9, 
    3.73126237162971*^9}, {3.731262427032879*^9, 3.7312624383515263`*^9}, {
-   3.7312624895224533`*^9, 3.7312624912535524`*^9}}]
+   3.7312624895224533`*^9, 3.7312625141408615`*^9}, {3.731262601079834*^9, 
+   3.73126261255049*^9}, {3.731262649233588*^9, 3.7312626752530766`*^9}, {
+   3.7312627580778136`*^9, 3.7312628259406953`*^9}, {3.731262861150709*^9, 
+   3.7312629021430535`*^9}, {3.7312629591723156`*^9, 
+   3.7312629613914423`*^9}, {3.7312629974535055`*^9, 
+   3.7312629979485335`*^9}, {3.7312630457652683`*^9, 
+   3.7312631084958563`*^9}, {3.7312631449919443`*^9, 3.731263165048091*^9}, 
+   3.7312632172650776`*^9, {3.7312633382419972`*^9, 3.7312633512757425`*^9}, {
+   3.7312633843676357`*^9, 3.7312634134432983`*^9}, {3.7312634744447875`*^9, 
+   3.7312634806011395`*^9}, {3.7312635130309944`*^9, 
+   3.7312635131380005`*^9}, {3.7312636744642277`*^9, 3.731263817132388*^9}, {
+   3.731263856010612*^9, 3.73126387031643*^9}, {3.731263913533902*^9, 
+   3.731263943516617*^9}, {3.7312639821508265`*^9, 3.731264015284722*^9}, {
+   3.7312640503047247`*^9, 3.731264127369133*^9}, {3.731264159239956*^9, 
+   3.7312641595409727`*^9}, {3.7312641975781484`*^9, 
+   3.7312642380764647`*^9}, {3.7312642761956453`*^9, 3.731264276417658*^9}, {
+   3.7312643771014166`*^9, 3.731264420253885*^9}, {3.7312645173134365`*^9, 
+   3.731264569201404*^9}}],
+
+Cell[BoxData["\<\"myPlot.pdf\"\>"], "Output",
+ CellChangeTimes->{
+  3.7312640223911285`*^9, {3.7312640636394873`*^9, 3.7312640945802574`*^9}, 
+   3.731264131362361*^9, 3.7312641640462303`*^9, {3.7312642163722234`*^9, 
+   3.731264241803678*^9}, 3.731264280175873*^9, 3.7312644313675203`*^9, {
+   3.7312645488932424`*^9, 3.731264572904616*^9}, 3.7312706490891895`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.731263622235241*^9, 3.7312636480177155`*^9}}]
 },
 WindowSize->{860, 822},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
@@ -697,7 +766,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 29348, 656, 3052, "Input"]
+Cell[CellGroupData[{
+Cell[700, 26, 32301, 712, 3332, "Input"],
+Cell[33004, 740, 366, 5, 31, "Output"]
+}, Open  ]],
+Cell[33385, 748, 94, 1, 31, "Input"]
 }
 ]
 *)
