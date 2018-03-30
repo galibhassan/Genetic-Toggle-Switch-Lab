@@ -3,8 +3,15 @@
 ## Checklist
 [x] `workingDirectory` must be set, for example, as this:
 `"D:\\labs\\toggle switch\\gitRepo\\Part01\\";`
+
 [x] `plotRangeInput` should be set . Initially it is set to `All`;
+
 [x] `plotInfo` must be set to any string that identifies the plot;
+
+## Kickstart
+- The `toggleSwitchPart1Main.nb` provides the functions that we need to use (documented below in the API). Firstly,  one should execute this file to make the functions available. 
+- The `test.nb` is just being used to execute our command and graphs. Changes is this file is completely ignorable. 
+
 
 ## API
 ##### importDataFrom[`string:fileName`]
