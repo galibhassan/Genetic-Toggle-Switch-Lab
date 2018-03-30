@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      2742,         82]
-NotebookOptionsPosition[      2322,         63]
-NotebookOutlinePosition[      2664,         78]
-CellTagsIndexPosition[      2621,         75]
+NotebookDataLength[      1541,         50]
+NotebookOptionsPosition[      1266,         36]
+NotebookOutlinePosition[      1608,         51]
+CellTagsIndexPosition[      1565,         48]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,44 +22,17 @@ Cell[BoxData[
  RowBox[{"Quit", "[", "]"}]], "Input",
  CellChangeTimes->{{3.73119055774743*^9, 3.731190560426583*^9}}],
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"myData", " ", "=", " ", 
-   RowBox[{"importDataFrom", "[", "\"\<OD600.txt\>\"", "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"timeOd600", " ", "=", " ", 
-   RowBox[{"getTimeArray", "[", "myData", "]"}]}], 
-  ";"}], "\[IndentingNewLine]"}], "Input",
- CellChangeTimes->{{3.731189153240096*^9, 3.731189201919881*^9}, {
-  3.731189233361679*^9, 3.731189275596095*^9}, {3.731189313131242*^9, 
-  3.7311893285011206`*^9}, {3.7311902277785563`*^9, 3.731190250096833*^9}, {
-  3.7311903043179345`*^9, 3.731190328616324*^9}}],
-
-Cell[CellGroupData[{
-
 Cell[BoxData[
- RowBox[{"makePdf", "[", "\[IndentingNewLine]", 
-  RowBox[{"myData", ",", "8", ",", "12"}], "\[IndentingNewLine]", 
-  "]"}]], "Input",
+ RowBox[{
+  RowBox[{"makePdf", "[", "\[IndentingNewLine]", 
+   RowBox[{"myData", ",", "8", ",", "12"}], "\[IndentingNewLine]", "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
  CellChangeTimes->{{3.7311986610259104`*^9, 3.731198707262555*^9}, {
-  3.731199688908702*^9, 3.731199689376729*^9}, {3.7311997593027287`*^9, 
-  3.7311997902484984`*^9}, {3.7311999354548035`*^9, 3.731199950915688*^9}, {
-  3.7312000000344973`*^9, 3.731200000976551*^9}, {3.7312007758818736`*^9, 
-  3.731200785145403*^9}, {3.7312393805603957`*^9, 3.731239381020422*^9}}],
-
-Cell[BoxData["\<\"myPlot.pdf\"\>"], "Output",
- CellChangeTimes->{
-  3.7312003986632977`*^9, 3.7312006044210663`*^9, 3.731200714735376*^9, {
-   3.7312007803271275`*^9, 3.731200788343586*^9}, 3.731200874417509*^9, 
-   3.7312009399702587`*^9, 3.7312009771913877`*^9, 3.7312010335566115`*^9, 
-   3.7312011410067577`*^9, 3.7312013052661524`*^9, {3.731201446406225*^9, 
-   3.7312014784790597`*^9}, 3.731239373730005*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{"SystemOpen", "[", "\"\<myPlot.pdf\>\"", "]"}]], "Input",
- NumberMarks->False]
+   3.731199688908702*^9, 3.731199689376729*^9}, {3.7311997593027287`*^9, 
+   3.7311997902484984`*^9}, {3.7311999354548035`*^9, 3.731199950915688*^9}, {
+   3.7312000000344973`*^9, 3.731200000976551*^9}, {3.7312007758818736`*^9, 
+   3.731200785145403*^9}, {3.7312393805603957`*^9, 3.731239381020422*^9}, 
+   3.7313417271942863`*^9}]
 },
 WindowSize->{704, 822},
 WindowMargins->{{Automatic, 0}, {0, Automatic}},
@@ -78,12 +51,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 117, 2, 31, "Input"],
-Cell[677, 24, 567, 12, 72, "Input"],
-Cell[CellGroupData[{
-Cell[1269, 40, 516, 8, 72, "Input"],
-Cell[1788, 50, 414, 6, 31, "Output"]
-}, Open  ]],
-Cell[2217, 59, 101, 2, 31, "Input"]
+Cell[677, 24, 585, 10, 92, "Input"]
 }
 ]
 *)

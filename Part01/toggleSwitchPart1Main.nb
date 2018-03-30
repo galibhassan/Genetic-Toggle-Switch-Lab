@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     33601,        757]
-NotebookOptionsPosition[     33321,        743]
-NotebookOutlinePosition[     33663,        758]
-CellTagsIndexPosition[     33620,        755]
+NotebookDataLength[     33732,        758]
+NotebookOptionsPosition[     33452,        744]
+NotebookOutlinePosition[     33794,        759]
+CellTagsIndexPosition[     33751,        756]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -630,9 +630,9 @@ Cell[BoxData[
             RowBox[{"plotInfo", ",", "6", ",", " ", 
              RowBox[{"RGBColor", "[", 
               RowBox[{
-               RowBox[{"221", "/", "255"}], ",", 
-               RowBox[{"81", "/", "255"}], ",", 
-               RowBox[{"69", "/", "255"}]}], "]"}]}], "]"}], "]"}]}], ";", 
+               RowBox[{"40", "/", "255"}], ",", 
+               RowBox[{"40", "/", "255"}], ",", 
+               RowBox[{"40", "/", "255"}]}], "]"}]}], "]"}], "]"}]}], ";", 
          "\[IndentingNewLine]", 
          RowBox[{"Export", "[", "\[IndentingNewLine]", 
           RowBox[{"\"\<myPlot.pdf\>\"", ",", "\[IndentingNewLine]", 
@@ -643,10 +643,9 @@ Cell[BoxData[
                RowBox[{"label", ",", " ", 
                 RowBox[{"{", 
                  RowBox[{"4480", ",", 
-                  RowBox[{"-", "1830"}]}], "}"}]}], "]"}]}]}], 
+                  RowBox[{"-", "2900"}]}], "}"}]}], "]"}]}]}], 
             "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ")"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.728851790403798*^9, 3.728851826316852*^9}, 
    3.72885187208747*^9, {3.7288519194421787`*^9, 3.7288519420244703`*^9}, {
@@ -739,7 +738,9 @@ Cell[BoxData[
    3.731341719784273*^9, 3.7313417513899283`*^9}, {3.731348871051193*^9, 
    3.731348890910028*^9}, {3.7313490927971334`*^9, 3.731349136353625*^9}, {
    3.7313491931728745`*^9, 3.731349194632958*^9}, {3.731349234264225*^9, 
-   3.731349234414233*^9}}]
+   3.731349234414233*^9}, {3.7313495025385695`*^9, 3.7313495355924597`*^9}, {
+   3.7313495844002514`*^9, 3.7313496259386272`*^9}, {3.7313496584624877`*^9, 
+   3.7313496706871867`*^9}, 3.7313498102721705`*^9}]
 },
 WindowSize->{704, 822},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
@@ -758,7 +759,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 32639, 717, 3472, "Input"]
+Cell[678, 24, 32770, 718, 3432, "Input"]
 }
 ]
 *)
