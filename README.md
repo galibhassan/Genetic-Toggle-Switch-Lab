@@ -45,3 +45,11 @@
 		- the column of that dataset from which we have to subtract, 
 		- the column of the dataset which has to be subtracted from the looser
 	Out:	Returns the dataset after subtraction.  
+
+
+
+
+#### subtractOneColFromAllCol[ matrix:dataset, colMat:subtractCol  ]
+	In: 	- a data-matrix, 
+		- a column which should be subtracted from all the columns of the data-matrix;
+	Out: 	the newly trimmed data matrix after subtraction;

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     37478,        856]
-NotebookOptionsPosition[     37160,        841]
-NotebookOutlinePosition[     37502,        856]
-CellTagsIndexPosition[     37459,        853]
+NotebookDataLength[     41214,        950]
+NotebookOptionsPosition[     40933,        936]
+NotebookOutlinePosition[     41276,        951]
+CellTagsIndexPosition[     41233,        948]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -694,51 +694,148 @@ Cell[BoxData[
         "performing", " ", "the", " ", "column", " ", "subtraction"}]}]}]}], 
     "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"dataAfterSubtraction", "[", 
-     RowBox[{"dataMat_", ",", "loosingCol_", ",", " ", "subtractCol_"}], 
-     "]"}], ":=", 
-    RowBox[{"(", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"Block", "[", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"resultantCol", ",", " ", "trimmedDataMat"}], "}"}], ",", 
-        "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"dataAfterSubtraction", "[", 
+      RowBox[{"dataMat_", ",", "loosingCol_", ",", " ", "subtractCol_"}], 
+      "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Block", "[", "\[IndentingNewLine]", 
         RowBox[{
-         RowBox[{"trimmedDataMat", " ", "=", " ", "dataMat"}], ";", 
+         RowBox[{"{", 
+          RowBox[{"resultantCol", ",", " ", "trimmedDataMat"}], "}"}], ",", 
          "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"trimmedDataMat", "[", 
-           RowBox[{"[", 
-            RowBox[{"All", ",", " ", "loosingCol"}], "]"}], "]"}], " ", "=", 
-          " ", 
+          RowBox[{"trimmedDataMat", " ", "=", " ", "dataMat"}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{"dataMat", "[", 
+           RowBox[{"trimmedDataMat", "[", 
             RowBox[{"[", 
-             RowBox[{"All", ",", " ", "loosingCol"}], "]"}], "]"}], " ", "-", 
+             RowBox[{"All", ",", " ", "loosingCol"}], "]"}], "]"}], " ", "=", 
+           " ", 
+           RowBox[{
+            RowBox[{"dataMat", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", " ", "loosingCol"}], "]"}], "]"}], " ", "-",
+             " ", 
+            RowBox[{"dataMat", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", " ", "subtractCol"}], "]"}], "]"}]}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+            RowBox[{"restoring", " ", "the", " ", "column", " ", "head"}], 
+            ",", " ", 
+            RowBox[{"e", ".", "g", ".", " ", "A1"}], ",", " ", "A2", ",", " ",
+             "etc"}], " ", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"trimmedDataMat", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", " ", "loosingCol"}], "]"}], "]"}], " ", "=", 
            " ", 
            RowBox[{"dataMat", "[", 
             RowBox[{"[", 
-             RowBox[{"All", ",", " ", "subtractCol"}], "]"}], "]"}]}]}], ";", 
+             RowBox[{"1", ",", "loosingCol"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", "trimmedDataMat", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{
+        RowBox[{"a", " ", "data"}], "-", "matrix"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "a", " ", "column", " ", "which", " ", "should", " ", "be", " ", 
+       "subtracted", " ", "from", " ", "all"}], ";", "\[IndentingNewLine]", 
+      "\t", 
+      RowBox[{"Out", ":", " ", 
+       RowBox[{
+       "the", " ", "newly", " ", "trimmed", " ", "data", " ", "matrix", " ", 
+        "by", " ", "subtraction"}]}], ";"}]}], "\[IndentingNewLine]", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"subtractOneColFromAllCol", "[", 
+      RowBox[{"dataMat_", ",", " ", "subtractCol_"}], "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Block", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"trimmedDataMat", ",", " ", "numOfCol"}], "}"}], ",", " ", 
          "\[IndentingNewLine]", 
-         RowBox[{"(*", " ", 
-          RowBox[{
-           RowBox[{"restoring", " ", "the", " ", "column", " ", "head"}], ",",
-            " ", 
-           RowBox[{"e", ".", "g", ".", " ", "A1"}], ",", " ", "A2", ",", " ", 
-           "etc"}], " ", "*)"}], "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"trimmedDataMat", "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", " ", "loosingCol"}], "]"}], "]"}], " ", "=", 
-          " ", 
-          RowBox[{"dataMat", "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "loosingCol"}], "]"}], "]"}]}], ";", 
-         "\[IndentingNewLine]", 
-         RowBox[{"Return", "[", "trimmedDataMat", "]"}], ";"}]}], 
-       "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
-     ")"}]}]}]}]], "Input",
+          RowBox[{"trimmedDataMat", "  ", "=", " ", "dataMat"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"numOfCol", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"Dimensions", "[", "dataMat", "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"For", "[", 
+           RowBox[{
+            RowBox[{"i", "=", "4"}], ",", " ", 
+            RowBox[{"i", "<", 
+             RowBox[{"numOfCol", "+", "1"}]}], ",", " ", 
+            RowBox[{"i", "++"}], ",", " ", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"trimmedDataMat", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", " ", "i"}], "]"}], "]"}], " ", "=", " ", 
+             RowBox[{
+              RowBox[{"dataMat", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "i"}], "]"}], "]"}], "-", " ", 
+              RowBox[{"dataMat", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "subtractCol"}], "]"}], "]"}]}]}]}], 
+           "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{"restoring", " ", "column", " ", "heads"}], " ", "*)"}], 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"trimmedDataMat", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "All"}], "]"}], "]"}], " ", "=", " ", 
+           RowBox[{"dataMat", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "All"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", "trimmedDataMat", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
+    ";"}]}]}]], "Input",
  CellChangeTimes->{{3.728851790403798*^9, 3.728851826316852*^9}, 
    3.72885187208747*^9, {3.7288519194421787`*^9, 3.7288519420244703`*^9}, {
    3.7288527266733494`*^9, 3.728852752589832*^9}, {3.7288528259300265`*^9, 
@@ -834,12 +931,10 @@ Cell[BoxData[
    3.7313495844002514`*^9, 3.7313496259386272`*^9}, {3.7313496584624877`*^9, 
    3.7313496706871867`*^9}, 3.7313498102721705`*^9, {3.7322041810413895`*^9, 
    3.7322042163884115`*^9}, {3.7322054590474873`*^9, 3.732205459878535*^9}, {
-   3.7322055285974655`*^9, 3.732205528982487*^9}}],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.732203816276526*^9, 3.732203821626832*^9}}]
+   3.7322055285974655`*^9, 3.732205528982487*^9}, {3.732208219778392*^9, 
+   3.73220830803644*^9}}]
 },
-WindowSize->{704, 822},
+WindowSize->{1128, 822},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
@@ -856,8 +951,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 36383, 812, 3752, "Input"],
-Cell[37064, 838, 92, 1, 31, "Input"]
+Cell[678, 24, 40251, 910, 3932, "Input"]
 }
 ]
 *)
