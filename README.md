@@ -49,14 +49,14 @@
 
 
 
-#### subtractOneColFromAllColAndPositify[ matrix:dataset, colMat:subtractCol  ]
+#### subtractOneColFromAllColAndPositify[ `matrix:dataset`, `colMat:subtractCol`  ]
 	In: 	- a data-matrix, 
 		- a column which should be subtracted from all the columns of the data-matrix;
 	Out: 	the newly trimmed data matrix after subtraction;
 
 
 
-#### getLinFitOfCol[ matrix:dataMatrix, int:colNum, int:subtractCol, float:amplifyFactor_] := (
+#### getLinFitOfCol[ `matrix:dataMatrix`, `int:colNum`, `int:subtractCol`, `float:amplifyFactor`] := (
 
 	In : 	- an imported data-matrix, 
 		- a column for which the fitting should be done, 
