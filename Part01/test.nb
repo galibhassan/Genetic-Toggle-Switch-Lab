@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      1541,         50]
-NotebookOptionsPosition[      1266,         36]
-NotebookOutlinePosition[      1608,         51]
-CellTagsIndexPosition[      1565,         48]
+NotebookDataLength[      1861,         61]
+NotebookOptionsPosition[      1515,         44]
+NotebookOutlinePosition[      1857,         59]
+CellTagsIndexPosition[      1814,         56]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,6 +21,8 @@ Notebook[{
 Cell[BoxData[
  RowBox[{"Quit", "[", "]"}]], "Input",
  CellChangeTimes->{{3.73119055774743*^9, 3.731190560426583*^9}}],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -32,7 +34,13 @@ Cell[BoxData[
    3.7311997902484984`*^9}, {3.7311999354548035`*^9, 3.731199950915688*^9}, {
    3.7312000000344973`*^9, 3.731200000976551*^9}, {3.7312007758818736`*^9, 
    3.731200785145403*^9}, {3.7312393805603957`*^9, 3.731239381020422*^9}, 
-   3.7313417271942863`*^9}]
+   3.7313417271942863`*^9, {3.7322035066148143`*^9, 3.732203541727823*^9}}],
+
+Cell[BoxData["\<\"myPlot.pdf\"\>"], "Output",
+ CellChangeTimes->{
+  3.732203360771473*^9, {3.7322035174914365`*^9, 3.732203546378089*^9}, 
+   3.732204308698691*^9}]
+}, Open  ]]
 },
 WindowSize->{704, 822},
 WindowMargins->{{Automatic, 0}, {0, Automatic}},
@@ -51,7 +59,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 117, 2, 31, "Input"],
-Cell[677, 24, 585, 10, 92, "Input"]
+Cell[CellGroupData[{
+Cell[699, 26, 633, 10, 92, "Input"],
+Cell[1335, 38, 164, 3, 87, "Output"]
+}, Open  ]]
 }
 ]
 *)
