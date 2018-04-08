@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     41214,        950]
-NotebookOptionsPosition[     40933,        936]
-NotebookOutlinePosition[     41276,        951]
-CellTagsIndexPosition[     41233,        948]
+NotebookDataLength[     43933,       1004]
+NotebookOptionsPosition[     43652,        990]
+NotebookOutlinePosition[     43995,       1005]
+CellTagsIndexPosition[     43952,       1002]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -48,11 +48,19 @@ Cell[BoxData[
        RowBox[{"{", 
         RowBox[{"0", ",", "14000"}], "}"}], ",", 
        RowBox[{"{", 
-        RowBox[{"0", ",", ".25"}], "}"}]}], "}"}]}], " ", ";"}], 
+        RowBox[{
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "1.5"}]}], "}"}]}], "}"}]}], " ", ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"plotInfo", " ", "=", " ", "\"\<OD\>\""}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"plotIdPosition", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"5000", ",", 
+       RowBox[{"-", "2"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", "\[IndentingNewLine]", "\t", 
     RowBox[{
      RowBox[{
@@ -353,8 +361,8 @@ Cell[BoxData[
              RowBox[{"RGBColor", "[", 
               RowBox[{".3", ",", ".3", ",", ".3"}], "]"}]}], ",", 
             "\[IndentingNewLine]", 
-            RowBox[{"Axes", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"Ticks", "\[Rule]", "None"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Axes", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Ticks", " ", "\[Rule]", " ", "False"}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"PlotRange", "\[Rule]", " ", "plotRangeInput"}], ",", 
             "\[IndentingNewLine]", 
@@ -388,7 +396,7 @@ Cell[BoxData[
                RowBox[{"FontWeight", "\[Rule]", "6"}], ",", 
                RowBox[{"FontSize", "\[Rule]", "Tiny"}]}], "}"}]}], ",", 
             "\[IndentingNewLine]", 
-            RowBox[{"Frame", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Frame", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
             RowBox[{"FrameTicks", "\[Rule]", 
              RowBox[{"{", "\[IndentingNewLine]", 
               RowBox[{
@@ -425,9 +433,7 @@ Cell[BoxData[
             RowBox[{"Axes", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
             RowBox[{"Epilog", "\[Rule]", 
              RowBox[{"Inset", "[", 
-              RowBox[{"txt", ",", " ", 
-               RowBox[{"{", 
-                RowBox[{"5000", ",", ".2"}], "}"}]}], "]"}]}]}], 
+              RowBox[{"txt", ",", " ", "plotIdPosition"}], "]"}]}]}], 
            "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
          RowBox[{"Return", "[", "plot", "]"}]}]}], "\[IndentingNewLine]", 
        "]"}], "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]", 
@@ -485,10 +491,10 @@ Cell[BoxData[
         " ", "to", " ", "be", " ", "generated"}]}], ";", 
       "\[IndentingNewLine]", "\t", 
       RowBox[{"Out", ":", " ", 
-       RowBox[{
-        RowBox[{"the", " ", "plot", " ", "of", " ", "column"}], "-", 
-        RowBox[{"data", " ", "vs", " ", 
-         RowBox[{"time", "."}]}]}]}]}]}], "\[IndentingNewLine]", "*)"}], 
+       RowBox[{"the", " ", "plot", " ", "of", " ", 
+        RowBox[{"Log", "[", 
+         RowBox[{"column", "-", "data"}], "]"}], " ", "vs", " ", 
+        RowBox[{"time", "."}]}]}]}]}], "\[IndentingNewLine]", "*)"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
@@ -527,9 +533,10 @@ Cell[BoxData[
               "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"plot", " ", "=", " ", 
            RowBox[{"generateSinglePlot", "[", 
-            RowBox[{
-            "timeArray", ",", " ", "arrayAtColNum", ",", " ", "plotID", ",", 
-             " ", "plotRangeInput"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"timeArray", ",", " ", 
+             RowBox[{"Log", "[", "arrayAtColNum", "]"}], ",", " ", "plotID", 
+             ",", " ", "plotRangeInput"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"Return", "[", "plot", "]"}], ";"}]}], 
         "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
     ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -788,15 +795,16 @@ Cell[BoxData[
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
-     RowBox[{"subtractOneColFromAllCol", "[", 
+     RowBox[{"subtractOneColFromAllColAndPositify", "[", 
       RowBox[{"dataMat_", ",", " ", "subtractCol_"}], "]"}], ":=", 
      RowBox[{"(", "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"Block", "[", "\[IndentingNewLine]", 
         RowBox[{
          RowBox[{"{", 
-          RowBox[{"trimmedDataMat", ",", " ", "numOfCol"}], "}"}], ",", " ", 
-         "\[IndentingNewLine]", 
+          RowBox[{
+          "trimmedDataMat", ",", " ", "numOfCol", ",", " ", "numOfRow"}], 
+          "}"}], ",", " ", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"trimmedDataMat", "  ", "=", " ", "dataMat"}], ";", 
           "\[IndentingNewLine]", 
@@ -804,6 +812,10 @@ Cell[BoxData[
            RowBox[{
             RowBox[{"Dimensions", "[", "dataMat", "]"}], "[", 
             RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"numOfRow", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"Dimensions", "[", "dataMat", "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"For", "[", 
            RowBox[{
             RowBox[{"i", "=", "4"}], ",", " ", 
@@ -822,6 +834,36 @@ Cell[BoxData[
                RowBox[{"[", 
                 RowBox[{"All", ",", "subtractCol"}], "]"}], "]"}]}]}]}], 
            "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", 
+          RowBox[{"For", "[", 
+           RowBox[{
+            RowBox[{"i", "=", "2"}], ",", " ", 
+            RowBox[{"i", "<", 
+             RowBox[{"numOfRow", "+", "1"}]}], ",", " ", 
+            RowBox[{"i", "++"}], ",", " ", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"For", "[", 
+              RowBox[{
+               RowBox[{"j", "=", "4"}], ",", " ", 
+               RowBox[{"j", "<", 
+                RowBox[{"numOfCol", "+", "1"}]}], ",", " ", 
+               RowBox[{"j", "++"}], ",", " ", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"If", "[", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"trimmedDataMat", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "<", "0"}], ",", 
+                  " ", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"trimmedDataMat", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], " ", "=", " ", 
+                    "0"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+              "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", 
+           "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
           RowBox[{"(*", " ", 
            RowBox[{"restoring", " ", "column", " ", "heads"}], " ", "*)"}], 
           "\[IndentingNewLine]", 
@@ -932,9 +974,21 @@ Cell[BoxData[
    3.7313496706871867`*^9}, 3.7313498102721705`*^9, {3.7322041810413895`*^9, 
    3.7322042163884115`*^9}, {3.7322054590474873`*^9, 3.732205459878535*^9}, {
    3.7322055285974655`*^9, 3.732205528982487*^9}, {3.732208219778392*^9, 
-   3.73220830803644*^9}}]
+   3.73220830803644*^9}, {3.732208691704385*^9, 3.7322086935244884`*^9}, {
+   3.732209034929016*^9, 3.7322090636606593`*^9}, {3.732209866474578*^9, 
+   3.732209903197678*^9}, {3.7322107435487432`*^9, 3.7322107516922092`*^9}, {
+   3.7322108242973623`*^9, 3.7322108277185574`*^9}, {3.7322108675228343`*^9, 
+   3.73221087549329*^9}, {3.7322116674525876`*^9, 3.7322118853150487`*^9}, {
+   3.7322119318997135`*^9, 3.732211981269537*^9}, {3.7322120141464176`*^9, 
+   3.7322120398108854`*^9}, {3.7322120829143505`*^9, 3.732212085304487*^9}, {
+   3.732212165409069*^9, 3.73221223710317*^9}, {3.7322122779635067`*^9, 
+   3.732212314979624*^9}, {3.7322123611072626`*^9, 3.7322123850216303`*^9}, {
+   3.7322124336474113`*^9, 3.732212448395255*^9}, {3.7322124950309224`*^9, 
+   3.732212495806967*^9}, {3.7322126087224255`*^9, 3.7322126612614307`*^9}, {
+   3.7322130276803885`*^9, 3.7322131921217937`*^9}, {3.732214497471074*^9, 
+   3.732214516391156*^9}}]
 },
-WindowSize->{1128, 822},
+WindowSize->{1040, 822},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
@@ -951,7 +1005,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 40251, 910, 3932, "Input"]
+Cell[678, 24, 42970, 964, 4132, "Input"]
 }
 ]
 *)

@@ -31,7 +31,7 @@
 ##### generatePlotOfColumn[`matrix:dataSet`, `int:columnNumber`]
 	In :    imported dataset, 
 	        the nth column-number for which the plot is to be generated;
-	Out :   the plot of nth column-data in the imported dataset vs time.
+	Out :   the plot of the natural e-based logarithm of the nth column-data in the imported dataset vs time.
 	
 #### makePdf[`matrix:dataSet`, `int:numberOfRows`, `int:numberOfColumns` ]
     In :    imported dataSet, 
@@ -49,7 +49,17 @@
 
 
 
-#### subtractOneColFromAllCol[ matrix:dataset, colMat:subtractCol  ]
+#### subtractOneColFromAllColAndPositify[ matrix:dataset, colMat:subtractCol  ]
 	In: 	- a data-matrix, 
 		- a column which should be subtracted from all the columns of the data-matrix;
 	Out: 	the newly trimmed data matrix after subtraction;
+
+
+
+#### getLinFitOfCol[ matrix:dataMatrix, int:colNum, int:subtractCol, float:amplifyFactor_] := (
+
+	In : 	- an imported data-matrix, 
+		- a column for which the fitting should be done, 
+		- a subtracting column corresponding to OD - trimming, 
+		- an amplification factor (since growth rate are very small);
+ 	Out :	slope value of the linear fit, i.e. the growth-rate for the user-given column.
