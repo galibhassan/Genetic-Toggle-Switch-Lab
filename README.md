@@ -39,3 +39,9 @@
             no.of columns;
 	Out :   Void. Creates a pdf in `documents` folder in the computer.
     
+#### dataAfterSubtraction[`matrix:dataset`, `columnMat:loosingCol`, `colMat:subtractCol`]
+
+	In:	- an imported dataset, 
+		- the column of that dataset from which we have to subtract, 
+		- the column of the dataset which has to be subtracted from the looser
+	Out:	Returns the dataset after subtraction.  
