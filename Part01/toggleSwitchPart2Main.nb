@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     61247,       1418]
-NotebookOptionsPosition[     60926,       1403]
-NotebookOutlinePosition[     61268,       1418]
-CellTagsIndexPosition[     61225,       1415]
+NotebookDataLength[     64082,       1467]
+NotebookOptionsPosition[     63801,       1453]
+NotebookOutlinePosition[     64143,       1468]
+CellTagsIndexPosition[     64100,       1465]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -52,18 +52,33 @@ Cell[BoxData[
        RowBox[{"{", 
         RowBox[{"0", ",", "14000"}], "}"}], ",", 
        RowBox[{"{", 
-        RowBox[{"0", ",", "7000"}], "}"}]}], "}"}]}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"plotInfo", " ", "=", " ", "\"\<GFP\>\""}], ";"}], 
+        RowBox[{"0", ",", "20"}], "}"}]}], "}"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"plotIdPosition", " ", "=", " ", 
      RowBox[{"{", 
-      RowBox[{"7000", ",", "5000"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+      RowBox[{"7000", ",", "5"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"plotInfo", " ", "=", " ", "\"\<GFP RFP corrected\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"growthRatAmpFactor", " ", "=", " ", "1"}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"gfpPlotColor", " ", "=", " ", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{
+       RowBox[{"51", "/", "255"}], ",", 
+       RowBox[{"186", "/", "255"}], ",", 
+       RowBox[{"136", "/", "255"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"rfpPlotColor", " ", "=", " ", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{
+       RowBox[{"255", "/", "255"}], ",", 
+       RowBox[{"84", "/", "255"}], ",", 
+       RowBox[{"80", "/", "255"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", "\[IndentingNewLine]", "\t", 
     RowBox[{
      RowBox[{
@@ -333,10 +348,10 @@ Cell[BoxData[
     "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
-     RowBox[{"generateSinglePlot", "[", 
+     RowBox[{"generateSinglePlotWithColor", "[", 
       RowBox[{
       "xData_", ",", "yData_", ",", " ", "plotID_", ",", " ", 
-       "plotRangeInput_"}], "]"}], ":=", " ", 
+       "plotRangeInput_", ",", " ", "plotColor_"}], "]"}], ":=", " ", 
      RowBox[{"(", "\[IndentingNewLine]", 
       RowBox[{"Block", "[", "\[IndentingNewLine]", 
        RowBox[{
@@ -365,18 +380,13 @@ Cell[BoxData[
               RowBox[{".3", ",", ".3", ",", ".3"}], "]"}]}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"Axes", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"Ticks", " ", "\[Rule]", " ", "False"}], ",", 
+            RowBox[{"Ticks", " ", "\[Rule]", " ", "True"}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"PlotRange", "\[Rule]", " ", "plotRangeInput"}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"PlotStyle", "\[Rule]", 
              RowBox[{"{", 
-              RowBox[{
-               RowBox[{"RGBColor", "[", 
-                RowBox[{
-                 RowBox[{"51", "/", "255"}], ",", 
-                 RowBox[{"186", "/", "255"}], ",", 
-                 RowBox[{"136", "/", "255"}]}], "]"}], ",", " ", 
+              RowBox[{"plotColor", ",", " ", 
                RowBox[{"Thickness", "[", ".02", "]"}]}], "}"}]}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
@@ -485,38 +495,43 @@ Cell[BoxData[
                     "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
 ]}]}]}]}]}]}]}]}]}]}]}]}]}], ";", "\[IndentingNewLine]", "\t", 
       RowBox[{"In", ":", " ", 
-       RowBox[{"imported", " ", "dataset"}]}]}], ",", " ", 
+       RowBox[{"imported", " ", "dataset01"}]}]}], ",", " ", 
      RowBox[{
       RowBox[{
-       RowBox[{"the", " ", "column"}], "-", 
+       RowBox[{"imported", " ", "dataset02", " ", "the", " ", "column"}], "-", 
        RowBox[{
        "number", " ", "of", " ", "which", " ", "the", " ", "plot", " ", "is", 
         " ", "to", " ", "be", " ", "generated"}]}], ";", 
       "\[IndentingNewLine]", "\t", 
       RowBox[{"Out", ":", " ", 
-       RowBox[{"the", " ", "plot", " ", "of", " ", 
-        RowBox[{"Log", "[", 
-         RowBox[{"column", "-", "data"}], "]"}], " ", "vs", " ", 
-        RowBox[{"time", "."}]}]}]}]}], "\[IndentingNewLine]", "*)"}], 
+       RowBox[{
+        RowBox[{"the", " ", "plot", " ", "of", " ", "column"}], "-", 
+        RowBox[{"data", " ", "vs", " ", 
+         RowBox[{"time", "."}]}]}]}]}]}], "\[IndentingNewLine]", "*)"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
-     RowBox[{"generatePlotOfColumn", "[", 
-      RowBox[{"importedDataMatrix_", ",", " ", "colNum_"}], "]"}], ":=", 
+     RowBox[{"generateCombinedPlotOfColumn", "[", 
+      RowBox[{"dataMat01_", ",", "dataMat02_", ",", " ", "colNum_"}], "]"}], ":=", 
      RowBox[{"(", "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"Block", "[", 
         RowBox[{
          RowBox[{"{", 
           RowBox[{
-          "timeArray", ",", " ", "arrayAtColNum", ",", " ", "plot", ",", " ", 
-           "plotID"}], "}"}], ",", "\[IndentingNewLine]", 
+          "combinedPlot", ",", "timeArray01", ",", "timeArray02", ",", " ", 
+           "array01AtColNum", ",", "array02AtColNum", ",", " ", "plot01", ",",
+            " ", "plot02", ",", " ", "plotID"}], "}"}], ",", 
+         "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"timeArray", " ", "=", " ", 
-           RowBox[{"getTimeArray", "[", "importedDataMatrix", "]"}]}], ";", 
+          RowBox[{"timeArray01", " ", "=", " ", 
+           RowBox[{"getTimeArray", "[", "dataMat01", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"timeArray02", " ", "=", " ", 
+           RowBox[{"getTimeArray", "[", "dataMat02", "]"}]}], ";", 
           "\[IndentingNewLine]", "\[IndentingNewLine]", 
           RowBox[{"plotID", " ", "=", " ", 
-           RowBox[{"importedDataMatrix", "[", 
+           RowBox[{"dataMat01", "[", 
             RowBox[{"[", 
              RowBox[{"1", ",", " ", "colNum"}], "]"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -526,23 +541,43 @@ Cell[BoxData[
             "\[IndentingNewLine]", 
             RowBox[{"plotID", " ", "=", " ", "\"\<\>\""}]}], 
            "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-          RowBox[{"arrayAtColNum", " ", "=", "  ", 
+          RowBox[{"array01AtColNum", " ", "=", "  ", 
            RowBox[{"ToExpression", "[", " ", 
             RowBox[{"Delete", "[", 
              RowBox[{
-              RowBox[{"importedDataMatrix", "[", 
+              RowBox[{"dataMat01", "[", 
                RowBox[{"[", 
                 RowBox[{"All", ",", "colNum"}], "]"}], "]"}], ",", " ", "1"}],
               "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"plot", " ", "=", " ", 
-           RowBox[{"generateSinglePlot", "[", 
+          RowBox[{"array02AtColNum", " ", "=", "  ", 
+           RowBox[{"ToExpression", "[", " ", 
+            RowBox[{"Delete", "[", 
+             RowBox[{
+              RowBox[{"dataMat02", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "colNum"}], "]"}], "]"}], ",", " ", "1"}],
+              "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", 
+          RowBox[{"plot01", " ", "=", " ", 
+           RowBox[{"generateSinglePlotWithColor", "[", 
             RowBox[{
-            "timeArray", ",", " ", "arrayAtColNum", ",", " ", "plotID", ",", 
-             " ", "plotRangeInput"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"Return", "[", "plot", "]"}], ";"}]}], 
+            "timeArray01", ",", " ", "array01AtColNum", ",", " ", "plotID", 
+             ",", " ", "plotRangeInput", ",", " ", "gfpPlotColor"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"plot02", " ", "=", " ", 
+           RowBox[{"generateSinglePlotWithColor", "[", 
+            RowBox[{
+            "timeArray02", ",", " ", "array02AtColNum", ",", " ", "plotID", 
+             ",", " ", "plotRangeInput", ",", " ", "rfpPlotColor"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"combinedPlot", " ", "=", " ", 
+           RowBox[{"Show", "[", 
+            RowBox[{"{", 
+             RowBox[{"plot01", ",", "plot02"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", "combinedPlot", "]"}], ";"}]}], 
         "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
     ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
      RowBox[{
@@ -572,7 +607,8 @@ Cell[BoxData[
                     "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}], 
       ";", "\[IndentingNewLine]", "\t", 
       RowBox[{"In", ":", " ", 
-       RowBox[{"imported", " ", "data"}]}]}], ",", " ", 
+       RowBox[{"imported", " ", "dataset01"}]}]}], ",", " ", 
+     RowBox[{"imported", " ", "dataset02"}], ",", " ", 
      RowBox[{
       RowBox[{"no", ".", " ", "of"}], " ", "rows"}], ",", " ", 
      RowBox[{
@@ -587,10 +623,10 @@ Cell[BoxData[
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
-     RowBox[{"makePdf", "[", 
+     RowBox[{"makePdfGfpRfp", "[", 
       RowBox[{
-      "importedDataGlobal_", ",", "numberOfRowsGlobal_", ",", 
-       "numberOfColumnsGlobal_"}], " ", "]"}], ":=", 
+      "dataMat01Global_", ",", "dataMat02Global_", ",", "numberOfRowsGlobal_",
+        ",", "numberOfColumnsGlobal_"}], " ", "]"}], ":=", 
      RowBox[{"(", "\[IndentingNewLine]", 
       RowBox[{"Block", "[", 
        RowBox[{
@@ -601,8 +637,8 @@ Cell[BoxData[
          RowBox[{
           RowBox[{"f", "[", 
            RowBox[{
-           "importedData_", ",", " ", "numberOfRows_", ",", " ", 
-            "numberOfColumns_"}], "]"}], ":=", 
+           "dataMat01_", ",", "dataMat02_", ",", " ", "numberOfRows_", ",", 
+            " ", "numberOfColumns_"}], "]"}], ":=", 
           RowBox[{"(", "\[IndentingNewLine]", 
            RowBox[{"Block", "[", 
             RowBox[{
@@ -616,9 +652,9 @@ Cell[BoxData[
                 RowBox[{
                  RowBox[{
                   RowBox[{"k", "++"}], ";", 
-                  RowBox[{"generatePlotOfColumn", "[", 
-                   RowBox[{"importedData", ",", "k"}], "]"}]}], ",", " ", 
-                 "\[IndentingNewLine]", 
+                  RowBox[{"generateCombinedPlotOfColumn", "[", 
+                   RowBox[{"dataMat01", ",", "dataMat02", ",", "k"}], "]"}]}],
+                  ",", " ", "\[IndentingNewLine]", 
                  RowBox[{"{", 
                   RowBox[{"i", ",", "1", ",", "numberOfRows"}], "}"}], ",", 
                  "\[IndentingNewLine]", 
@@ -631,8 +667,9 @@ Cell[BoxData[
          RowBox[{"plotMatrix", " ", "=", " ", 
           RowBox[{"f", "[", 
            RowBox[{
-           "importedDataGlobal", ",", "numberOfRowsGlobal", ",", " ", 
-            "numberOfColumnsGlobal"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           "dataMat01Global", ",", " ", "dataMat02Global", ",", 
+            "numberOfRowsGlobal", ",", " ", "numberOfColumnsGlobal"}], 
+           "]"}]}], ";", "\[IndentingNewLine]", 
          RowBox[{"label", " ", "=", " ", 
           RowBox[{"Text", "[", 
            RowBox[{"Style", "[", 
@@ -1395,13 +1432,26 @@ Cell[BoxData[
    3.7322578434550943`*^9, 3.7322578554377794`*^9}, {3.732257911253972*^9, 
    3.7322579118520064`*^9}, {3.732258119986911*^9, 3.732258151124692*^9}, {
    3.7322589705375595`*^9, 3.732258972381665*^9}, {3.73225913996025*^9, 
-   3.732259176796357*^9}, {3.7322650270029697`*^9, 3.7322650997881327`*^9}}],
-
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
- CellChangeTimes->{{3.7322650246358347`*^9, 3.7322650247448406`*^9}}]
+   3.732259176796357*^9}, {3.7322650270029697`*^9, 3.7322650997881327`*^9}, {
+   3.7322662883201127`*^9, 3.732266292360344*^9}, {3.732266507232634*^9, 
+   3.7322665588335857`*^9}, {3.732266655565118*^9, 3.732266692925255*^9}, {
+   3.732266740629984*^9, 3.732266744844225*^9}, {3.732266786872628*^9, 
+   3.732266787792681*^9}, {3.732266882846118*^9, 3.732266905036387*^9}, {
+   3.7322669706371393`*^9, 3.7322670769542203`*^9}, {3.7322671079739943`*^9, 
+   3.7322671553017015`*^9}, {3.732267279491805*^9, 3.732267280703874*^9}, {
+   3.732267323525323*^9, 3.7322673248063965`*^9}, {3.7322673653747168`*^9, 
+   3.732267368088872*^9}, {3.7322674023598323`*^9, 3.7322674024888396`*^9}, {
+   3.7322675071668267`*^9, 3.732267531859239*^9}, {3.732267643211608*^9, 
+   3.7322676953505907`*^9}, {3.7322687776874967`*^9, 
+   3.7322688268023057`*^9}, {3.7322691563761563`*^9, 3.732269161892472*^9}, {
+   3.7322692113813024`*^9, 3.732269233060542*^9}, {3.732269275973997*^9, 
+   3.7322692764720254`*^9}, {3.732269333512288*^9, 3.732269358424713*^9}, {
+   3.7322695505186996`*^9, 3.7322696075669627`*^9}, 3.73226963898176*^9, {
+   3.732269695263979*^9, 3.7322697125629683`*^9}, {3.7322698630615764`*^9, 
+   3.7322698648266773`*^9}, 3.732269922687987*^9, {3.732269973980921*^9, 
+   3.7322700105280113`*^9}, {3.7322701011011915`*^9, 3.732270133401039*^9}}]
 },
-WindowSize->{704, 822},
+WindowSize->{876, 822},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
@@ -1418,8 +1468,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 60091, 1373, 6192, "Input"],
-Cell[60772, 1399, 150, 2, 72, "Input"]
+Cell[678, 24, 63119, 1427, 6132, "Input"]
 }
 ]
 *)

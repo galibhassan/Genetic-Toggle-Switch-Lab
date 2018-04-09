@@ -10,203 +10,332 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11485,        227]
-NotebookOptionsPosition[     11132,        210]
-NotebookOutlinePosition[     11474,        225]
-CellTagsIndexPosition[     11431,        222]
+NotebookDataLength[     14344,        367]
+NotebookOptionsPosition[     13608,        339]
+NotebookOutlinePosition[     13950,        354]
+CellTagsIndexPosition[     13907,        351]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
- RowBox[{"aaa", " ", "=", 
+ RowBox[{"\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"subtractOneColFromAllColAndPositify", "[", 
-    RowBox[{"gfpData", ",", "50"}], " ", "]"}], "//", 
-   "MatrixForm"}]}]], "Input",
+   RowBox[{"normalizedBgCorrectedGFP", " ", "=", " ", 
+    RowBox[{"N", "[", "\[IndentingNewLine]", 
+     RowBox[{"normalizeByInitialColValue", "[", "\[IndentingNewLine]", 
+      RowBox[{"subtractOneColFromAllColAndPositify", "[", 
+       RowBox[{"gfpData", ",", "50"}], " ", "]"}], "\[IndentingNewLine]", 
+      "]"}], "\[IndentingNewLine]", "]"}]}], ";"}]}]], "Input",
  CellChangeTimes->{{3.732263283077223*^9, 3.7322633190782824`*^9}, {
-  3.7322635997903376`*^9, 3.7322636096279*^9}, {3.7322636799159207`*^9, 
-  3.732263681492011*^9}}],
+   3.7322635997903376`*^9, 3.7322636096279*^9}, {3.7322636799159207`*^9, 
+   3.732263681492011*^9}, {3.732264816542932*^9, 3.732264853814064*^9}, {
+   3.7322653722917194`*^9, 3.732265423305637*^9}, {3.732265513867817*^9, 
+   3.732265517327015*^9}, 3.732265578111491*^9, {3.73226569732731*^9, 
+   3.7322657050287504`*^9}, {3.7322662057713914`*^9, 3.7322662099246287`*^9}}],
 
 Cell[BoxData[
- TagBox[
-  RowBox[{"(", "\[NoBreak]", GridBox[{
-     {"\<\"Time\"\>", "\<\"T\[Degree]\"\>", "\<\"GFP:485/20\"\>", "\<\"528/20\
-\"\>", "\<\"A1\"\>", "\<\"A2\"\>", "\<\"A3\"\>", "\<\"A4\"\>", "\<\"A5\"\>", \
-"\<\"A6\"\>", "\<\"A7\"\>", "\<\"A8\"\>", "\<\"A9\"\>", "\<\"A10\"\>", \
-"\<\"A11\"\>", "\<\"A12\"\>", "\<\"B1\"\>", "\<\"B2\"\>", "\<\"B3\"\>", \
-"\<\"B4\"\>", "\<\"B5\"\>", "\<\"B6\"\>", "\<\"B7\"\>", "\<\"B8\"\>", "\<\"B9\
-\"\>", "\<\"B10\"\>", "\<\"B11\"\>", "\<\"B12\"\>", "\<\"C1\"\>", \
-"\<\"C2\"\>", "\<\"C3\"\>", "\<\"C4\"\>", "\<\"C5\"\>", "\<\"C6\"\>", "\<\"C7\
-\"\>", "\<\"C8\"\>", "\<\"C9\"\>", "\<\"C10\"\>", "\<\"C11\"\>", \
-"\<\"C12\"\>", "\<\"D1\"\>", "\<\"D2\"\>", "\<\"D3\"\>", "\<\"D4\"\>", \
-"\<\"D5\"\>", "\<\"D6\"\>", "\<\"D7\"\>", "\<\"D8\"\>", "\<\"D9\"\>", \
-"\<\"D10\"\>", "\<\"D11\"\>", "\<\"D12\"\>", "\<\"E1\"\>", "\<\"E2\"\>", \
-"\<\"E3\"\>", "\<\"E4\"\>", "\<\"E5\"\>", "\<\"E6\"\>", "\<\"E7\"\>", "\<\"E8\
-\"\>", "\<\"E9\"\>", "\<\"E10\"\>", "\<\"E11\"\>", "\<\"E12\"\>", \
-"\<\"F1\"\>", "\<\"F2\"\>", "\<\"F3\"\>", "\<\"F4\"\>", "\<\"F5\"\>", "\<\"F6\
-\"\>", "\<\"F7\"\>", "\<\"F8\"\>", "\<\"F9\"\>", "\<\"F10\"\>", \
-"\<\"F11\"\>", "\<\"F12\"\>", "\<\"G1\"\>", "\<\"G2\"\>", "\<\"G3\"\>", \
-"\<\"G4\"\>", "\<\"G5\"\>", "\<\"G6\"\>", "\<\"G7\"\>", "\<\"G8\"\>", "\<\"G9\
-\"\>", "\<\"G10\"\>", "\<\"G11\"\>", "\<\"G12\"\>", "\<\"H1\"\>", \
-"\<\"H2\"\>", "\<\"H3\"\>", "\<\"H4\"\>", "\<\"H5\"\>", "\<\"H6\"\>", "\<\"H7\
-\"\>", "\<\"H8\"\>", "\<\"H9\"\>", "\<\"H10\"\>", "\<\"H11\"\>", \
-"\<\"H12\"\>"},
-     {"\<\"0:00:00\"\>", "30.6`", "2623", "3077", "474", "0", "676", "0", 
-      "118", "160", "0", "0", "0", "0", "0", "92", "545", "0", "537", "0", 
-      "22", "17", "36", "0", "32", "108", "1286", "1942", "2433", "1254", 
-      "2410", "1079", "1946", "1835", "1928", "1906", "1905", "2026", "1394", 
-      "1973", "2467", "1243", "2473", "1006", "2010", "2051", "0", "0", "0", 
-      "0", "0", "54", "509", "0", "492", "0", "67", "82", "0", "0", "0", "0", 
-      "0", "0", "423", "0", "415", "0", "47", "67", "0", "0", "0", "0", "0", 
-      "0", "269", "0", "218", "0", "0", "0", "0", "0", "0", "0", "0", "0", 
-      "366", "0", "272", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
-     {"\<\"1:23:19\"\>", "37.`", "2638", "3058", "532", "0", "721", "0", 
-      "282", "295", "0", "0", "0", "0", "0", "257", "618", "0", "647", "0", 
-      "191", "197", "250", "169", "212", "273", "941", "1581", "1924", "944", 
-      "1863", "844", "1492", "1497", "1666", "1637", "1633", "1730", "1052", 
-      "1601", "1980", "998", "1897", "699", "1442", "1595", "0", "0", "0", 
-      "0", "0", "261", "630", "0", "619", "0", "269", "305", "0", "0", "0", 
-      "0", "0", "191", "561", "0", "558", "0", "279", "261", "0", "0", "0", 
-      "0", "0", "0", "332", "0", "387", "0", "86", "96", "0", "0", "0", "0", 
-      "0", "0", "391", "0", "434", "0", "100", "172", "0", "0", "0", "0", "0",
-       "0"},
-     {"\<\"1:54:30\"\>", "36.9`", "2805", "3256", "799", "186", "948", "0", 
-      "497", "512", "0", "0", "0", "0", "0", "500", "843", "0", "867", "0", 
-      "415", "431", "453", "393", "441", "463", "870", "1467", "1787", "802", 
-      "1656", "612", "1287", "1356", "1578", "1589", "1633", "1637", "935", 
-      "1497", "1894", "772", "1756", "600", "1316", "1434", "12", "19", "0", 
-      "0", "0", "536", "865", "0", "831", "0", "480", "520", "0", "0", "0", 
-      "0", "0", "424", "794", "0", "797", "0", "501", "508", "0", "0", "0", 
-      "0", "0", "0", "384", "0", "585", "0", "310", "282", "0", "0", "0", "0",
-       "0", "0", "471", "0", "652", "0", "293", "375", "0", "0", "0", "0", 
-      "0", "0"},
-     {"\<\"2:30:26\"\>", "37.`", "3241", "3732", "1246", "590", "1404", "367",
-       "884", "955", "0", "0", "0", "0", "359", "953", "1311", "328", "1303", 
-      "319", "878", "838", "921", "843", "877", "861", "885", "1550", "1828", 
-      "812", "1561", "555", "1184", "1275", "1882", "1876", "1837", "1619", 
-      "949", "1513", "1866", "858", "1668", "568", "1254", "1388", "0", "0", 
-      "0", "0", "390", "1004", "1377", "394", "1304", "355", "964", "1025", 
-      "0", "0", "0", "0", "300", "875", "1271", "385", "1262", "378", "976", 
-      "911", "0", "0", "0", "0", "0", "2", "696", "0", "1108", "0", "762", 
-      "649", "0", "0", "0", "0", "0", "0", "810", "0", "1188", "0", "678", 
-      "709", "0", "0", "0", "0", "0", "0"},
-     {"\<\"2:56:51\"\>", "37.`", "3665", "4172", "1622", "966", "1808", "754",
-       "1294", "1343", "0", "0", "0", "0", "737", "1361", "1714", "697", 
-      "1700", "682", "1282", "1267", "1367", "1269", "1260", "1210", "566", 
-      "1014", "1264", "548", "1170", "266", "1025", "896", "1465", "1399", 
-      "1310", "1258", "695", "1139", "1373", "552", "1163", "229", "739", 
-      "837", "0", "0", "0", "0", "778", "1449", "1772", "798", "1745", "740", 
-      "1381", "1398", "0", "0", "0", "0", "663", "1279", "1713", "752", 
-      "1669", "773", "1385", "1274", "0", "0", "0", "0", "0", "0", "790", "0",
-       "1297", "0", "749", "712", "0", "0", "0", "0", "0", "15", "1113", "0", 
-      "1532", "150", "927", "808", "0", "0", "0", "0", "0", "0"},
-     {"\<\"3:30:38\"\>", "37.`", "4426", "4989", "2285", "1536", "2532", 
-      "1281", "1955", "2015", "0", "0", "0", "0", "1277", "2020", "2381", 
-      "1197", "2392", "1161", "1903", "1922", "2029", "1953", "1897", "1988", 
-      "490", "852", "1153", "188", "999", "0", "807", "440", "880", "883", 
-      "1020", "1086", "605", "997", "1178", "198", "1107", "0", "631", "566", 
-      "0", "0", "0", "0", "1360", "2118", "2471", "1334", "2430", "1242", 
-      "2026", "2094", "0", "0", "0", "0", "1204", "1959", "2414", "1318", 
-      "2381", "1256", "2058", "1947", "0", "0", "0", "0", "0", "0", "1197", 
-      "0", "1787", "205", "1224", "1055", "0", "0", "0", "0", "0", "226", 
-      "2590", "1773", "2899", "461", "1922", "1464", "0", "0", "0", "0", "0", 
-      "0"},
-     {"\<\"4:00:48\"\>", "37.`", "5099", "5754", "3078", "2065", "3272", 
-      "1769", "2549", "2607", "0", "0", "0", "0", "1778", "2639", "3201", 
-      "1656", "3118", "1608", "2483", "2515", "2680", "2581", "2542", "2573", 
-      "648", "1207", "1403", "202", "1215", "0", "822", "306", "1115", "1046",
-       "957", "1137", "607", "1370", "3106", "304", "1477", "0", "786", "485",
-       "0", "0", "0", "0", "1874", "2746", "3228", "1837", "3219", "1738", 
-      "2663", "2729", "0", "0", "0", "0", "1719", "2565", "3196", "1784", 
-      "3148", "1724", "2686", "2438", "0", "0", "0", "0", "0", "65", "1798", 
-      "879", "2361", "976", "3028", "2252", "0", "0", "0", "0", "0", "265", 
-      "2601", "1813", "2999", "2361", "2249", "1534", "0", "0", "0", "0", "0",
-       "0"}
-    },
-    GridBoxAlignment->{
-     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-      "RowsIndexed" -> {}},
-    GridBoxSpacings->{"Columns" -> {
-        Offset[0.27999999999999997`], {
-         Offset[0.7]}, 
-        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
-        Offset[0.2], {
-         Offset[0.4]}, 
-        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
-  Function[BoxForm`e$, 
-   MatrixForm[BoxForm`e$]]]], "Output",
- CellChangeTimes->{{3.7322636032395353`*^9, 3.7322636102149343`*^9}, 
-   3.732263682248054*^9}]
-}, Open  ]],
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"normalizedBgCorrectedRFP", " ", "=", " ", 
+    RowBox[{"N", "[", "\[IndentingNewLine]", 
+     RowBox[{"normalizeByInitialColValue", "[", "\[IndentingNewLine]", 
+      RowBox[{"subtractOneColFromAllColAndPositify", "[", 
+       RowBox[{"gfpData", ",", "39"}], " ", "]"}], "\[IndentingNewLine]", 
+      "]"}], "\[IndentingNewLine]", "]"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.732263283077223*^9, 3.7322633190782824`*^9}, {
+   3.7322635997903376`*^9, 3.7322636096279*^9}, {3.7322636799159207`*^9, 
+   3.732263681492011*^9}, {3.732264816542932*^9, 3.732264853814064*^9}, {
+   3.7322653722917194`*^9, 3.732265423305637*^9}, {3.732265513867817*^9, 
+   3.732265517327015*^9}, 3.732265578111491*^9, {3.73226569732731*^9, 
+   3.7322657050287504`*^9}, {3.732265760561927*^9, 3.7322657626710477`*^9}, {
+   3.7322658804877863`*^9, 3.7322658828079185`*^9}, {3.732265937968074*^9, 
+   3.732265961598426*^9}, {3.7322661900274906`*^9, 3.7322662003560815`*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.732268238712669*^9}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{
-   RowBox[{"normalizeByInitialColValue", "[", "dataMat_", "]"}], ":=", 
+   RowBox[{"generateCombinedPlotOfColumn", "[", 
+    RowBox[{"dataMat01_", ",", "dataMat02_", ",", " ", "colNum_"}], "]"}], ":=", 
    RowBox[{"(", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"Block", "[", "\[IndentingNewLine]", 
+     RowBox[{"Block", "[", 
       RowBox[{
        RowBox[{"{", 
-        RowBox[{"numOfCol", ",", " ", "numOfRow", ",", " ", "tempDataMat"}], 
-        "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+        "combinedPlot", ",", "timeArray01", ",", "timeArray02", ",", " ", 
+         "array01AtColNum", ",", "array02AtColNum", ",", " ", "plot01", ",", 
+         " ", "plot02", ",", " ", "plotID"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
        RowBox[{
-        RowBox[{"tempDataMat", " ", "=", " ", "dataMat"}], ";", 
+        RowBox[{"timeArray01", " ", "=", " ", 
+         RowBox[{"getTimeArray", "[", "dataMat01", "]"}]}], ";", 
         "\[IndentingNewLine]", 
-        RowBox[{"numOfCol", " ", "=", " ", 
+        RowBox[{"timeArray02", " ", "=", " ", 
+         RowBox[{"getTimeArray", "[", "dataMat02", "]"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"plotID", " ", "=", " ", 
+         RowBox[{"dataMat01", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", " ", "colNum"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"Dimensions", "[", "dataMat", "]"}], "[", 
-          RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"numOfRow", " ", "=", " ", 
-         RowBox[{
-          RowBox[{"Dimensions", "[", "dataMat", "]"}], "[", 
-          RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"For", "[", 
-         RowBox[{
-          RowBox[{"i", "=", "2"}], ",", " ", 
-          RowBox[{"i", "<", 
-           RowBox[{"numOfRow", "+", "1"}]}], ",", " ", 
-          RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"plotID", " ", "\[Equal]", " ", "\"\<H12\>\""}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"plotID", " ", "=", " ", "\"\<\>\""}]}], 
+         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"array01AtColNum", " ", "=", "  ", 
+         RowBox[{"ToExpression", "[", " ", 
+          RowBox[{"Delete", "[", 
+           RowBox[{
+            RowBox[{"dataMat01", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", "colNum"}], "]"}], "]"}], ",", " ", "1"}], 
+           "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"array02AtColNum", " ", "=", "  ", 
+         RowBox[{"ToExpression", "[", " ", 
+          RowBox[{"Delete", "[", 
+           RowBox[{
+            RowBox[{"dataMat02", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", "colNum"}], "]"}], "]"}], ",", " ", "1"}], 
+           "]"}], "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"plot01", " ", "=", " ", 
+         RowBox[{"generateSinglePlotWithColor", "[", 
           RowBox[{
-           RowBox[{"For", "[", 
-            RowBox[{
-             RowBox[{"j", "=", "3"}], ",", " ", 
-             RowBox[{"j", "<", 
-              RowBox[{"numOfCol", "+", "1"}]}], ",", " ", 
-             RowBox[{"j", "++"}], ",", " ", "\[IndentingNewLine]", 
-             RowBox[{
-              RowBox[{"If", "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"dataMat", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"2", ",", "j"}], "]"}], "]"}], " ", "\[NotEqual]", 
-                 " ", "0"}], ",", " ", "\[IndentingNewLine]", 
-                RowBox[{
-                 RowBox[{"tempDataMat", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"i", ",", "j"}], "]"}], "]"}], " ", "=", " ", 
-                 RowBox[{
-                  RowBox[{"dataMat", "[", 
-                   RowBox[{"[", 
-                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "/", 
-                  RowBox[{"dataMat", "[", 
-                   RowBox[{"[", 
-                    RowBox[{"2", ",", " ", "j"}], "]"}], "]"}]}]}]}], 
-               "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", 
-            "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+          "timeArray01", ",", " ", "array01AtColNum", ",", " ", "plotID", ",",
+            " ", "plotRangeInput", ",", " ", "gfpPlotColor"}], "]"}]}], ";", 
         "\[IndentingNewLine]", 
-        RowBox[{"Return", "[", "tempDataMat", "]"}], ";"}]}], 
+        RowBox[{"plot02", " ", "=", " ", 
+         RowBox[{"generateSinglePlotWithColor", "[", 
+          RowBox[{
+          "timeArray02", ",", " ", "array02AtColNum", ",", " ", "plotID", ",",
+            " ", "plotRangeInput", ",", " ", "rfpPlotColor"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"combinedPlot", " ", "=", " ", 
+         RowBox[{"Show", "[", 
+          RowBox[{"{", 
+           RowBox[{"plot01", ",", "plot02"}], "}"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"Return", "[", "combinedPlot", "]"}], ";"}]}], 
       "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
   ";"}]], "Input",
- CellChangeTimes->{{3.7322637192141685`*^9, 3.7322638048330655`*^9}, {
-  3.7322638831235437`*^9, 3.7322640669650583`*^9}, {3.732264099719932*^9, 
-  3.732264266367464*^9}, {3.7322643281329966`*^9, 3.732264378357869*^9}, {
-  3.7322644107097197`*^9, 3.7322645219710836`*^9}, {3.7322645619733715`*^9, 
-  3.7322646615940695`*^9}}]
+ CellChangeTimes->{{3.7322682472911596`*^9, 3.732268395783653*^9}, {
+   3.7322684301546187`*^9, 3.7322685847924633`*^9}, {3.732268667061169*^9, 
+   3.7322686683112407`*^9}, 3.732268755250213*^9, {3.732268835280791*^9, 
+   3.732268893020093*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"generateCombinedPlotOfColumn", "[", 
+  RowBox[{"gfpData", ",", " ", "rfpData", ",", " ", "6"}], "]"}]], "Input",
+ CellChangeTimes->{{3.732268682726065*^9, 3.732268716706009*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {{}, {}, 
+     {RGBColor[
+       NCache[
+        Rational[1, 5], 0.2], 
+       NCache[
+        Rational[62, 85], 0.7294117647058823], 
+       NCache[
+        Rational[8, 15], 0.5333333333333333]], Thickness[0.02], 
+      LineBox[{{0., 2717.}, {4999., 2693.}, {6870., 2906.}, {9026., 3350.}, {
+       10611., 3766.}, {12638., 4477.}, {14448., 
+       5144.}}]}}, {}}, {{}, {{}, {}, 
+     {RGBColor[1, 
+       NCache[
+        Rational[28, 85], 0.32941176470588235`], 
+       NCache[
+        Rational[16, 51], 0.3137254901960784]], Thickness[0.02], 
+      LineBox[{{31., 546.}, {5030., 505.}, {6901., 446.}, {9057., 490.}, {
+       10642., 491.}, {12669., 739.}, {14479., 1072.}}]}}, {}}},
+  AspectRatio->1,
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  AxesStyle->RGBColor[0.3, 0.3, 0.3],
+  BaseStyle->{FontWeight -> 6, FontSize -> Tiny},
+  Epilog->InsetBox[
+    BoxData[
+     FormBox[
+      InterpretationBox[
+       Cell[
+        BoxData[
+         FormBox[
+          StyleBox["\"A2\"", 3, 
+           RGBColor[0.5, 0.5, 0.5], StripOnInput -> False], TextForm]], 
+        "InlineText"], 
+       Text[
+        Style["A2", 3, 
+         RGBColor[0.5, 0.5, 0.5]]]], TraditionalForm]], {10000, 5}],
+  FrameStyle->{
+    Thickness[0.005], 
+    Thickness[0.005], 
+    Thickness[0.001], 
+    Thickness[0.001]},
+  FrameTicks->{{None, None}, {None, None}},
+  Method->{},
+  PlotRange->{All, All},
+  PlotRangeClipping->True,
+  PlotRangePadding->{Automatic, Automatic},
+  Ticks->True]], "Output",
+ CellChangeTimes->{
+  3.7322687593994503`*^9, {3.732268873614983*^9, 3.732268895952261*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7322686482100906`*^9, 3.7322686599157605`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"makePdf", "[", 
+  RowBox[{"normalizedBgCorrectedRFP", ",", " ", "8", ",", " ", "12"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.732266027711207*^9, 3.732266032472479*^9}, {
+  3.7322660730127983`*^9, 3.7322661304940853`*^9}, {3.732266256591298*^9, 
+  3.7322662596254716`*^9}, {3.7322672413626237`*^9, 3.7322672445158043`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}], 
+     ";", "\[IndentingNewLine]", "\t", 
+     RowBox[{"In", ":", " ", 
+      RowBox[{"imported", " ", "data"}]}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"no", ".", " ", "of"}], " ", "rows"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"no", ".", "of"}], " ", "columns"}], ";", "\[IndentingNewLine]",
+      "\t", 
+     RowBox[{"Out", ":", " ", 
+      RowBox[{
+       RowBox[{"Void", ".", " ", "Creates"}], " ", "a", " ", "pdf", " ", "in",
+        " ", "my", " ", "documents", " ", 
+       RowBox[{"folder", "."}]}]}]}]}], "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"makePdfGfpRfp", "[", 
+      RowBox[{
+      "dataMat01Global_", ",", "dataMat02Global_", ",", "numberOfRowsGlobal_",
+        ",", "numberOfColumnsGlobal_"}], " ", "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{"Block", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"plotMatrix", ",", " ", "label"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"f", "[", 
+           RowBox[{
+           "dataMat01_", ",", "dataMat02_", ",", " ", "numberOfRows_", ",", 
+            " ", "numberOfColumns_"}], "]"}], ":=", 
+          RowBox[{"(", "\[IndentingNewLine]", 
+           RowBox[{"Block", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"graphHolder", ",", "k"}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"k", "=", "4"}], ";", "\[IndentingNewLine]", 
+              RowBox[{"graphHolder", " ", "=", " ", 
+               RowBox[{"Table", "[", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"k", "++"}], ";", 
+                  RowBox[{"generateCombinedPlotOfColumn", "[", 
+                   RowBox[{"dataMat01", ",", "dataMat02", ",", "k"}], "]"}]}],
+                  ",", " ", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"i", ",", "1", ",", "numberOfRows"}], "}"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"j", ",", "1", ",", "numberOfColumns"}], "}"}]}], 
+                "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"Return", "[", "graphHolder", "]"}], ";"}]}], 
+            "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ")"}]}], ";",
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"plotMatrix", " ", "=", " ", 
+          RowBox[{"f", "[", 
+           RowBox[{
+           "dataMat01Global", ",", " ", "dataMat02Global", ",", 
+            "numberOfRowsGlobal", ",", " ", "numberOfColumnsGlobal"}], 
+           "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"label", " ", "=", " ", 
+          RowBox[{"Text", "[", 
+           RowBox[{"Style", "[", 
+            RowBox[{"plotInfo", ",", "6", ",", " ", 
+             RowBox[{"RGBColor", "[", 
+              RowBox[{
+               RowBox[{"40", "/", "255"}], ",", 
+               RowBox[{"40", "/", "255"}], ",", 
+               RowBox[{"40", "/", "255"}]}], "]"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Export", "[", "\[IndentingNewLine]", 
+          RowBox[{"\"\<myPlot.pdf\>\"", ",", "\[IndentingNewLine]", 
+           RowBox[{"GraphicsGrid", "[", "\[IndentingNewLine]", 
+            RowBox[{"plotMatrix", ",", "\[IndentingNewLine]", 
+             RowBox[{"Epilog", "\[Rule]", 
+              RowBox[{"Inset", "[", 
+               RowBox[{"label", ",", " ", 
+                RowBox[{"{", 
+                 RowBox[{"4480", ",", 
+                  RowBox[{"-", "2900"}]}], "}"}]}], "]"}]}]}], 
+            "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
+       "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ")"}]}], ";"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.7322678782960544`*^9, 3.732268011032646*^9}, {
+  3.7322680517559757`*^9, 3.732268061260519*^9}, {3.7322689490752993`*^9, 
+  3.732268974159734*^9}, {3.7322690159211226`*^9, 3.7322690275927906`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"makePdfGfpRfp", "[", 
+  RowBox[{"gfpData", ",", " ", "rfpData", ",", " ", "8", ",", " ", "12"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.732269062187769*^9, 3.7322690940975943`*^9}}],
+
+Cell[BoxData["\<\"myPlot.pdf\"\>"], "Output",
+ CellChangeTimes->{3.7322691139957323`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "\"\<myPlot.pdf\>\"", "]"}]], "Input",
+ NumberMarks->False]
 },
 WindowSize->{704, 822},
 WindowMargins->{{Automatic, 0}, {0, Automatic}},
@@ -224,11 +353,22 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[557, 20, 869, 14, 132, "Input"],
+Cell[1429, 36, 1021, 16, 132, "Input"],
+Cell[2453, 54, 87, 1, 52, "Input"],
+Cell[2543, 57, 3339, 72, 512, "Input"],
 Cell[CellGroupData[{
-Cell[579, 22, 361, 8, 31, "Input"],
-Cell[943, 32, 7309, 109, 147, "Output"]
+Cell[5907, 133, 202, 3, 31, "Input"],
+Cell[6112, 138, 1626, 50, 369, "Output"]
 }, Open  ]],
-Cell[8267, 144, 2861, 64, 332, "Input"]
+Cell[7753, 191, 96, 1, 31, "Input"],
+Cell[7852, 194, 350, 6, 31, "Input"],
+Cell[8205, 202, 4958, 119, 652, "Input"],
+Cell[CellGroupData[{
+Cell[13188, 325, 208, 4, 31, "Input"],
+Cell[13399, 331, 89, 1, 31, "Output"]
+}, Open  ]],
+Cell[13503, 335, 101, 2, 31, "Input"]
 }
 ]
 *)
