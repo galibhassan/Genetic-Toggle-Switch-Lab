@@ -1,0 +1,297 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11393,        287]
+NotebookOptionsPosition[     10354,        249]
+NotebookOutlinePosition[     10696,        264]
+CellTagsIndexPosition[     10653,        261]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Switching", " ", "rate"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.732279583288542*^9, 3.7322795955052404`*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.732279598666421*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"correctedODData", " ", "=", " ", 
+    RowBox[{"subtractOneColFromAllColAndPositify", "[", 
+     RowBox[{"odData", ",", " ", "12"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"normalizedBgCorrectedGFP", " ", "=", " ", 
+    RowBox[{"N", "[", "\[IndentingNewLine]", 
+     RowBox[{"normalizeByInitialColValue", "[", "\[IndentingNewLine]", 
+      RowBox[{"subtractOneColFromAllColAndPositify", "[", 
+       RowBox[{"gfpData", ",", "50"}], " ", "]"}], "\[IndentingNewLine]", 
+      "]"}], "\[IndentingNewLine]", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"normalizedBgCorrectedRFP", " ", "=", " ", 
+    RowBox[{"N", "[", "\[IndentingNewLine]", 
+     RowBox[{"normalizeByInitialColValue", "[", "\[IndentingNewLine]", 
+      RowBox[{"subtractOneColFromAllColAndPositify", "[", 
+       RowBox[{"gfpData", ",", "39"}], " ", "]"}], "\[IndentingNewLine]", 
+      "]"}], "\[IndentingNewLine]", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ODDividedNormBGCorrGFP", " ", "=", "  ", 
+   RowBox[{"DevideElementWise", "[", 
+    RowBox[{"normalizedBgCorrectedGFP", ",", " ", "correctedODData"}], 
+    "]"}]}], ";", 
+  RowBox[{"ODDividedNormBGCorrRFP", " ", "=", "  ", 
+   RowBox[{"DevideElementWise", "[", 
+    RowBox[{"normalizedBgCorrectedRFP", ",", " ", "correctedODData"}], 
+    "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.732279620045644*^9, 3.732279660385951*^9}, {
+  3.7322797028133783`*^9, 3.732279775837555*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.7322801551032476`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"linearFitDataOfPurifiedGFP", " ", "=", "  ", 
+   RowBox[{"getGrowthRateAll", "[", 
+    RowBox[{"ODDividedNormBGCorrGFP", ",", " ", "50"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.732280155937295*^9, 3.7322802103194056`*^9}, {
+  3.7322802426402545`*^9, 3.7322802695167913`*^9}, {3.732281053504633*^9, 
+  3.732281128858943*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"FittedModel", "::", "varzero"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The estimated variance is zero. Properties requiring \
+division by the variance or standard error will not be computed. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/FittedModel\\\", ButtonNote -> \
+\\\"FittedModel::varzero\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.732280246382468*^9, 3.732280270804865*^9}, 
+   3.732280382111232*^9, {3.732280510129554*^9, 3.732280553805052*^9}, 
+   3.7322806780121565`*^9, 3.7322809618283896`*^9, {3.732281056263791*^9, 
+   3.732281063814223*^9}, 3.732281154246395*^9, 3.7322820388349905`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"FittedModel", "::", "varzero"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The estimated variance is zero. Properties requiring \
+division by the variance or standard error will not be computed. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/FittedModel\\\", ButtonNote -> \
+\\\"FittedModel::varzero\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.732280246382468*^9, 3.732280270804865*^9}, 
+   3.732280382111232*^9, {3.732280510129554*^9, 3.732280553805052*^9}, 
+   3.7322806780121565`*^9, 3.7322809618283896`*^9, {3.732281056263791*^9, 
+   3.732281063814223*^9}, 3.732281154246395*^9, 3.732282038993*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"FittedModel", "::", "varzero"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The estimated variance is zero. Properties requiring \
+division by the variance or standard error will not be computed. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/FittedModel\\\", ButtonNote -> \
+\\\"FittedModel::varzero\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.732280246382468*^9, 3.732280270804865*^9}, 
+   3.732280382111232*^9, {3.732280510129554*^9, 3.732280553805052*^9}, 
+   3.7322806780121565`*^9, 3.7322809618283896`*^9, {3.732281056263791*^9, 
+   3.732281063814223*^9}, 3.732281154246395*^9, 3.732282039153009*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(FittedModel :: varzero\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.732280246382468*^9, 3.732280270804865*^9}, 
+   3.732280382111232*^9, {3.732280510129554*^9, 3.732280553805052*^9}, 
+   3.7322806780121565`*^9, 3.7322809618283896`*^9, {3.732281056263791*^9, 
+   3.732281063814223*^9}, 3.732281154246395*^9, 3.7322820392050123`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{"\"\<gfpFitSlope.txt\>\"", ",", " ", "\[IndentingNewLine]", 
+   RowBox[{"Partition", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"linearFitDataOfPurifiedGFP", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", " ", "12"}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.7322813294354153`*^9, 3.7322814200946007`*^9}, {
+  3.7322814841282635`*^9, 3.7322814965949764`*^9}, {3.7322816767842827`*^9, 
+  3.732281677526325*^9}, {3.7322817417659993`*^9, 3.7322817500794744`*^9}, {
+  3.7322819658598166`*^9, 3.73228198532093*^9}, {3.732282054750901*^9, 
+  3.7322820598731937`*^9}}],
+
+Cell[BoxData["\<\"gfpFitSlope.txt\"\>"], "Output",
+ CellChangeTimes->{{3.7322813524757333`*^9, 3.7322813587100897`*^9}, {
+   3.732281410901075*^9, 3.732281421678692*^9}, 3.7322815010732327`*^9, {
+   3.7322816622354507`*^9, 3.732281679061413*^9}, 3.732281753060645*^9, {
+   3.7322819567802973`*^9, 3.732281986915021*^9}, {3.732282046128408*^9, 
+   3.7322820619293118`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"linearFitDataOfPurifiedRFP", " ", "=", "  ", 
+   RowBox[{"getGrowthRateAll", "[", 
+    RowBox[{"ODDividedNormBGCorrRFP", ",", " ", "39"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7322818847991805`*^9, 3.732281897958933*^9}, {
+  3.7322820712988477`*^9, 3.7322820779502277`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"FittedModel", "::", "varzero"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The estimated variance is zero. Properties requiring \
+division by the variance or standard error will not be computed. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/FittedModel\\\", ButtonNote -> \
+\\\"FittedModel::varzero\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.732281899796038*^9, 3.732281998661693*^9, 
+  3.732282088452829*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"FittedModel", "::", "varzero"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The estimated variance is zero. Properties requiring \
+division by the variance or standard error will not be computed. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/FittedModel\\\", ButtonNote -> \
+\\\"FittedModel::varzero\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.732281899796038*^9, 3.732281998661693*^9, 
+  3.7322820886088376`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"FittedModel", "::", "varzero"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The estimated variance is zero. Properties requiring \
+division by the variance or standard error will not be computed. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/FittedModel\\\", ButtonNote -> \
+\\\"FittedModel::varzero\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.732281899796038*^9, 3.732281998661693*^9, 
+  3.7322820887628465`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(FittedModel :: varzero\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.732281899796038*^9, 3.732281998661693*^9, 
+  3.73228208881485*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", "\[IndentingNewLine]", 
+  RowBox[{"\"\<rfpFitError.txt\>\"", ",", " ", "\[IndentingNewLine]", 
+   RowBox[{"Partition", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"linearFitDataOfPurifiedRFP", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "2"}], "]"}], "]"}], ",", " ", "12"}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.732282103368682*^9, 3.7322821436079836`*^9}}],
+
+Cell[BoxData["\<\"rfpFitError.txt\"\>"], "Output",
+ CellChangeTimes->{{3.73228212240077*^9, 3.732282147877228*^9}}]
+}, Open  ]]
+},
+WindowSize->{704, 822},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 163, 3, 31, "Input"],
+Cell[723, 25, 87, 1, 52, "Input"],
+Cell[813, 28, 1614, 35, 372, "Input"],
+Cell[2430, 65, 89, 1, 52, "Input"],
+Cell[CellGroupData[{
+Cell[2544, 70, 372, 8, 52, "Input"],
+Cell[2919, 80, 748, 13, 39, "Message"],
+Cell[3670, 95, 743, 13, 39, "Message"],
+Cell[4416, 110, 746, 13, 39, "Message"],
+Cell[5165, 125, 781, 14, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5983, 144, 735, 13, 132, "Input"],
+Cell[6721, 159, 372, 5, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7130, 169, 323, 7, 52, "Input"],
+Cell[7456, 178, 551, 11, 39, "Message"],
+Cell[8010, 191, 553, 11, 39, "Message"],
+Cell[8566, 204, 553, 11, 39, "Message"],
+Cell[9122, 217, 583, 12, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9742, 234, 478, 9, 132, "Input"],
+Cell[10223, 245, 115, 1, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
