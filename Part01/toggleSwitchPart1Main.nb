@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     43933,       1004]
-NotebookOptionsPosition[     43652,        990]
-NotebookOutlinePosition[     43995,       1005]
-CellTagsIndexPosition[     43952,       1002]
+NotebookDataLength[     56001,       1300]
+NotebookOptionsPosition[     55720,       1286]
+NotebookOutlinePosition[     56062,       1301]
+CellTagsIndexPosition[     56019,       1298]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -60,7 +60,9 @@ Cell[BoxData[
      RowBox[{"{", 
       RowBox[{"5000", ",", 
        RowBox[{"-", "2"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"growthRatAmpFactor", " ", "=", " ", "10000000"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", "\[IndentingNewLine]", "\t", 
     RowBox[{
      RowBox[{
@@ -877,7 +879,296 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"Return", "[", "trimmedDataMat", "]"}], ";"}]}], 
         "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
-    ";"}]}]}]], "Input",
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{
+        RowBox[{"a", " ", "data"}], "-", "matrix"}]}]}], ",", " ", 
+     RowBox[{
+     "a", " ", "column", " ", "for", " ", "which", " ", "the", " ", "fitting",
+       " ", "should", " ", "be", " ", "done"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+      "a", " ", "subtracting", " ", "column", " ", "corresponding", " ", "to",
+        " ", "OD"}], "-", "trimming"}], ",", " ", 
+     RowBox[{
+      RowBox[{"an", " ", "amplification", " ", "factor", " ", 
+       RowBox[{"(", 
+        RowBox[{
+        "since", " ", "growth", " ", "rate", " ", "are", " ", "very", " ", 
+         "small"}], ")"}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"Out", ":", " ", 
+       RowBox[{
+       "slope", " ", "value", " ", "of", " ", "the", " ", "linear", " ", 
+        "fit"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"i", ".", "e", ".", " ", "the"}], " ", "growthrate", " ", 
+        "for", " ", "the", " ", "user"}], "-", 
+       RowBox[{"given", " ", "column"}]}], ";"}]}], "\[IndentingNewLine]", 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"getLinFitOfCol", "[", 
+      RowBox[{
+      "dataMat_", ",", " ", "colNum_", ",", " ", "subtractCol_", ",", " ", 
+       "amplifyFactor_"}], "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Block", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "xdt", ",", " ", "ydt", ",", " ", "ft", ",", " ", "slope", ",", " ",
+            "err"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"xdt", " ", "=", " ", 
+           RowBox[{"getTimeArray", "[", "dataMat", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ydt", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"subtractOneColFromAllColAndPositify", "[", 
+             RowBox[{"dataMat", ",", " ", "subtractCol"}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"2", ";;", "8"}], ",", "colNum"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ft", " ", "=", " ", 
+           RowBox[{"LinearModelFit", "[", 
+            RowBox[{
+             RowBox[{"Thread", "[", 
+              RowBox[{"{", 
+               RowBox[{"xdt", ",", "ydt"}], "}"}], "]"}], ",", "x", ",", 
+             "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"slope", " ", "=", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ft", "[", "\"\<BestFitParameters\>\"", "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}], " ", "*", " ", 
+            "amplifyFactor"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+           "Since", " ", "its", " ", "output", " ", "is", " ", "an", " ", 
+            "array", " ", 
+            RowBox[{"{", 
+             RowBox[{"yIntercept", ",", " ", "slope"}], "}"}]}], " ", "*)"}], 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"err", " ", "=", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"ft", "[", "\"\<ParameterTable\>\"", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"1", ",", "1"}], "]"}], "]"}], "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "[", 
+             RowBox[{"[", "3", "]"}], "]"}], " ", "*", " ", 
+            RowBox[{"amplifyFactor", "/", "10000"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", 
+           RowBox[{"{", " ", 
+            RowBox[{"slope", ",", " ", "err"}], "}"}], "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{"a", " ", "dataMatrix"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"the", " ", "column", " ", "for", " ", "OD"}], "-", 
+       "subtraction"}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"Out", ":", " ", 
+       RowBox[{"growth", "-", 
+        RowBox[{"rate", " ", "for", " ", "A1"}], "-", 
+        RowBox[{"H12", " ", 
+         RowBox[{"(", 
+          RowBox[{"all", " ", "96", " ", "of", " ", 
+           RowBox[{"them", "!"}]}], " ", ")"}]}]}]}], ";"}]}], 
+    "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"getGrowthRateAll", "[", 
+      RowBox[{"dataMat_", ",", " ", "subtructColOD_"}], "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Block", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"numOfCol", ",", "growthRateArray", ",", " ", "temp"}], 
+          "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"numOfCol", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"Dimensions", "[", "dataMat", "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"growthRateArray", " ", "=", " ", 
+           RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Do", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"temp", " ", "=", " ", 
+              RowBox[{"getLinFitOfCol", "[", 
+               RowBox[{
+               "dataMat", ",", "i", ",", "subtructColOD", ",", 
+                "growthRatAmpFactor"}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"growthRateArray", " ", "=", " ", 
+              RowBox[{"Append", "[", 
+               RowBox[{"growthRateArray", ",", "temp"}], "]"}]}]}], 
+            "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "4", ",", "numOfCol"}], "}"}]}], 
+           "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", "growthRateArray", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{"a", " ", "dataMatrix"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"the", " ", "column", " ", "for", " ", "OD"}], "-", 
+       "subtraction"}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"Out", ":", " ", 
+       RowBox[{"a", " ", 
+        RowBox[{"growthRate", ".", "txt"}], " ", "and", " ", 
+        RowBox[{"grrowthRateErr", ".", "txt"}], " ", "in", " ", "the", " ", 
+        "document", " ", "folder"}]}], ";"}]}], "\[IndentingNewLine]", "*)"}],
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"growthRateAndErrorExport", "[", 
+      RowBox[{"dataMat_", ",", " ", "subtructColOD_"}], "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{"Block", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"growthRate", ",", " ", "growthRateError"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"growthRate", " ", "=", "  ", 
+          RowBox[{
+           RowBox[{"Transpose", "[", "\[IndentingNewLine]", 
+            RowBox[{"getGrowthRateAll", "[", 
+             RowBox[{"dataMat", ",", " ", "subtructColOD"}], "]"}], "]"}], 
+           "[", 
+           RowBox[{"[", "1", "]"}], "\[IndentingNewLine]", "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"growthRateError", " ", "=", "  ", 
+          RowBox[{
+           RowBox[{"Transpose", "[", "\[IndentingNewLine]", 
+            RowBox[{"getGrowthRateAll", "[", 
+             RowBox[{"dataMat", ",", " ", "subtructColOD"}], "]"}], "]"}], 
+           "[", 
+           RowBox[{"[", "2", "]"}], "\[IndentingNewLine]", "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Export", "[", "\[IndentingNewLine]", 
+          RowBox[{"\"\<growthRate.txt\>\"", ",", " ", 
+           RowBox[{"Partition", "[", 
+            RowBox[{"growthRate", ",", "12"}], "]"}]}], "\[IndentingNewLine]",
+           "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"Export", "[", "\[IndentingNewLine]", 
+          RowBox[{"\"\<grrowthRateErr.txt\>\"", ",", " ", 
+           RowBox[{"Partition", "[", 
+            RowBox[{"growthRateError", ",", "12"}], "]"}]}], 
+          "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}],
+       "\[IndentingNewLine]", ")"}]}], ";"}]}]}]], "Input",
  CellChangeTimes->{{3.728851790403798*^9, 3.728851826316852*^9}, 
    3.72885187208747*^9, {3.7288519194421787`*^9, 3.7288519420244703`*^9}, {
    3.7288527266733494`*^9, 3.728852752589832*^9}, {3.7288528259300265`*^9, 
@@ -986,9 +1277,14 @@ Cell[BoxData[
    3.7322124336474113`*^9, 3.732212448395255*^9}, {3.7322124950309224`*^9, 
    3.732212495806967*^9}, {3.7322126087224255`*^9, 3.7322126612614307`*^9}, {
    3.7322130276803885`*^9, 3.7322131921217937`*^9}, {3.732214497471074*^9, 
-   3.732214516391156*^9}}]
+   3.732214516391156*^9}, {3.7322176833512964`*^9, 3.7322177177942667`*^9}, {
+   3.732218934325848*^9, 3.732218950178755*^9}, {3.732222793303569*^9, 
+   3.732222895065389*^9}, {3.7322237967939653`*^9, 3.73222384215956*^9}, 
+   3.7322238926644487`*^9, {3.7322276501963673`*^9, 3.732227679700055*^9}, {
+   3.7322277290848794`*^9, 3.732227743712716*^9}, {3.7322525856093626`*^9, 
+   3.732252599512158*^9}, {3.732252634553162*^9, 3.7322526596846*^9}}]
 },
-WindowSize->{1040, 822},
+WindowSize->{704, 822},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
@@ -1005,7 +1301,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 42970, 964, 4132, "Input"]
+Cell[678, 24, 55038, 1260, 5712, "Input"]
 }
 ]
 *)
