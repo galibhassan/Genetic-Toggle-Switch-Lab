@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     56001,       1300]
-NotebookOptionsPosition[     55720,       1286]
-NotebookOutlinePosition[     56062,       1301]
-CellTagsIndexPosition[     56019,       1298]
+NotebookDataLength[     56650,       1307]
+NotebookOptionsPosition[     56369,       1293]
+NotebookOutlinePosition[     56711,       1308]
+CellTagsIndexPosition[     56668,       1305]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,8 +38,8 @@ Cell[BoxData[
      "\"\<D:\\\\labs\\\\toggle switch\\\\gitRepo\\\\Part01\\\\\>\""}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"myData", " ", "=", " ", 
-     RowBox[{"importDataFrom", "[", "\"\<OD600.txt\>\"", "]"}]}], ";"}], 
+    RowBox[{"gfpData", " ", "=", " ", 
+     RowBox[{"importDataFrom", "[", "\"\<GFP.txt\>\"", "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"plotRangeInput", " ", "=", " ", 
@@ -48,20 +48,17 @@ Cell[BoxData[
        RowBox[{"{", 
         RowBox[{"0", ",", "14000"}], "}"}], ",", 
        RowBox[{"{", 
-        RowBox[{
-         RowBox[{"-", "5"}], ",", 
-         RowBox[{"-", "1.5"}]}], "}"}]}], "}"}]}], " ", ";"}], 
+        RowBox[{"0", ",", "7000"}], "}"}]}], "}"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"plotInfo", " ", "=", " ", "\"\<OD\>\""}], ";"}], 
+    RowBox[{"plotInfo", " ", "=", " ", "\"\<GFP\>\""}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"plotIdPosition", " ", "=", " ", 
      RowBox[{"{", 
-      RowBox[{"5000", ",", 
-       RowBox[{"-", "2"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+      RowBox[{"7000", ",", "5000"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"growthRatAmpFactor", " ", "=", " ", "10000000"}], ";"}], 
+    RowBox[{"growthRatAmpFactor", " ", "=", " ", "1"}], ";"}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", "\[IndentingNewLine]", "\t", 
     RowBox[{
@@ -373,9 +370,9 @@ Cell[BoxData[
               RowBox[{
                RowBox[{"RGBColor", "[", 
                 RowBox[{
-                 RowBox[{"110", "/", "255"}], ",", 
-                 RowBox[{"132", "/", "255"}], ",", 
-                 RowBox[{"147", "/", "255"}]}], "]"}], ",", " ", 
+                 RowBox[{"51", "/", "255"}], ",", 
+                 RowBox[{"186", "/", "255"}], ",", 
+                 RowBox[{"136", "/", "255"}]}], "]"}], ",", " ", 
                RowBox[{"Thickness", "[", ".02", "]"}]}], "}"}]}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
@@ -535,10 +532,9 @@ Cell[BoxData[
               "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"plot", " ", "=", " ", 
            RowBox[{"generateSinglePlot", "[", 
-            RowBox[{"timeArray", ",", " ", 
-             RowBox[{"Log", "[", "arrayAtColNum", "]"}], ",", " ", "plotID", 
-             ",", " ", "plotRangeInput"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+            RowBox[{
+            "timeArray", ",", " ", "arrayAtColNum", ",", " ", "plotID", ",", 
+             " ", "plotRangeInput"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"Return", "[", "plot", "]"}], ";"}]}], 
         "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
     ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -610,7 +606,7 @@ Cell[BoxData[
               RowBox[{"graphHolder", ",", "k"}], "}"}], ",", 
              "\[IndentingNewLine]", 
              RowBox[{
-              RowBox[{"k", "=", "3"}], ";", "\[IndentingNewLine]", 
+              RowBox[{"k", "=", "4"}], ";", "\[IndentingNewLine]", 
               RowBox[{"graphHolder", " ", "=", " ", 
                RowBox[{"Table", "[", "\[IndentingNewLine]", 
                 RowBox[{
@@ -820,7 +816,7 @@ Cell[BoxData[
             RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"For", "[", 
            RowBox[{
-            RowBox[{"i", "=", "4"}], ",", " ", 
+            RowBox[{"i", "=", "5"}], ",", " ", 
             RowBox[{"i", "<", 
              RowBox[{"numOfCol", "+", "1"}]}], ",", " ", 
             RowBox[{"i", "++"}], ",", " ", "\[IndentingNewLine]", 
@@ -846,7 +842,7 @@ Cell[BoxData[
             RowBox[{
              RowBox[{"For", "[", 
               RowBox[{
-               RowBox[{"j", "=", "4"}], ",", " ", 
+               RowBox[{"j", "=", "5"}], ",", " ", 
                RowBox[{"j", "<", 
                 RowBox[{"numOfCol", "+", "1"}]}], ",", " ", 
                RowBox[{"j", "++"}], ",", " ", "\[IndentingNewLine]", 
@@ -1282,10 +1278,21 @@ Cell[BoxData[
    3.732222895065389*^9}, {3.7322237967939653`*^9, 3.73222384215956*^9}, 
    3.7322238926644487`*^9, {3.7322276501963673`*^9, 3.732227679700055*^9}, {
    3.7322277290848794`*^9, 3.732227743712716*^9}, {3.7322525856093626`*^9, 
-   3.732252599512158*^9}, {3.732252634553162*^9, 3.7322526596846*^9}}]
+   3.732252599512158*^9}, {3.732252634553162*^9, 3.7322526596846*^9}, {
+   3.732255924598342*^9, 3.7322559410342817`*^9}, {3.732256061328162*^9, 
+   3.7322560620882063`*^9}, {3.7322561956578455`*^9, 
+   3.7322562291167593`*^9}, {3.7322563561640263`*^9, 3.732256356731058*^9}, {
+   3.7322564435150223`*^9, 3.732256459804954*^9}, {3.7322564921488037`*^9, 
+   3.7322564969590793`*^9}, {3.7322565988799086`*^9, 3.732256725502151*^9}, {
+   3.7322571626601553`*^9, 3.732257163201186*^9}, {3.732257234754278*^9, 
+   3.7322572731994777`*^9}, {3.7322575095389953`*^9, 
+   3.7322575135812263`*^9}, {3.732257726802422*^9, 3.7322577497607355`*^9}, {
+   3.7322578434550943`*^9, 3.7322578554377794`*^9}, {3.732257911253972*^9, 
+   3.7322579118520064`*^9}, {3.732258119986911*^9, 3.732258151124692*^9}, {
+   3.7322589705375595`*^9, 3.732258972381665*^9}}]
 },
-WindowSize->{709, 292},
-WindowMargins->{{8, Automatic}, {Automatic, 7}},
+WindowSize->{704, 822},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1301,7 +1308,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 55038, 1260, 5712, "Input"]
+Cell[678, 24, 55687, 1267, 5712, "Input"]
 }
 ]
 *)
