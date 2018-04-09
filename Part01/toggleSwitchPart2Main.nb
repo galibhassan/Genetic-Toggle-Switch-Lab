@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     56650,       1307]
-NotebookOptionsPosition[     56369,       1293]
-NotebookOutlinePosition[     56711,       1308]
-CellTagsIndexPosition[     56668,       1305]
+NotebookDataLength[     61247,       1418]
+NotebookOptionsPosition[     60926,       1403]
+NotebookOutlinePosition[     61268,       1418]
+CellTagsIndexPosition[     61225,       1415]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -40,6 +40,10 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"gfpData", " ", "=", " ", 
      RowBox[{"importDataFrom", "[", "\"\<GFP.txt\>\"", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"rfpData", " ", "=", " ", 
+     RowBox[{"importDataFrom", "[", "\"\<mcherry.txt\>\"", "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"plotRangeInput", " ", "=", " ", 
@@ -1164,7 +1168,108 @@ Cell[BoxData[
            RowBox[{"Partition", "[", 
             RowBox[{"growthRateError", ",", "12"}], "]"}]}], 
           "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}],
-       "\[IndentingNewLine]", ")"}]}], ";"}]}]}]], "Input",
+       "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{"a", " ", "dataMatrix"}]}]}], ",", "\[IndentingNewLine]", "\t", 
+     RowBox[{
+      RowBox[{"Out", ":", " ", 
+       RowBox[{
+       "new", " ", "datamatrix", " ", "every", " ", "column", " ", "of", " ", 
+        "which", " ", "is", " ", "divided", " ", "by", " ", "the", " ", 
+        "initial", " ", "value", " ", "of", " ", "that", " ", "column"}]}], 
+      ";"}]}], "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"normalizeByInitialColValue", "[", "dataMat_", "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Block", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"numOfCol", ",", " ", "numOfRow", ",", " ", "tempDataMat"}],
+           "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"tempDataMat", " ", "=", " ", "dataMat"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"numOfCol", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"Dimensions", "[", "dataMat", "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"numOfRow", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"Dimensions", "[", "dataMat", "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"For", "[", 
+           RowBox[{
+            RowBox[{"i", "=", "2"}], ",", " ", 
+            RowBox[{"i", "<", 
+             RowBox[{"numOfRow", "+", "1"}]}], ",", " ", 
+            RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"For", "[", 
+              RowBox[{
+               RowBox[{"j", "=", "3"}], ",", " ", 
+               RowBox[{"j", "<", 
+                RowBox[{"numOfCol", "+", "1"}]}], ",", " ", 
+               RowBox[{"j", "++"}], ",", " ", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"dataMat", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ",", "j"}], "]"}], "]"}], " ", "\[NotEqual]",
+                    " ", "0"}], ",", " ", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"tempDataMat", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], " ", "=", " ", 
+                   RowBox[{
+                    RowBox[{"dataMat", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "/", 
+                    RowBox[{"dataMat", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ",", " ", "j"}], "]"}], "]"}]}]}]}], 
+                 "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]",
+               "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", "tempDataMat", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
+    ";"}]}]}]], "Input",
  CellChangeTimes->{{3.728851790403798*^9, 3.728851826316852*^9}, 
    3.72885187208747*^9, {3.7288519194421787`*^9, 3.7288519420244703`*^9}, {
    3.7288527266733494`*^9, 3.728852752589832*^9}, {3.7288528259300265`*^9, 
@@ -1289,7 +1394,12 @@ Cell[BoxData[
    3.7322575135812263`*^9}, {3.732257726802422*^9, 3.7322577497607355`*^9}, {
    3.7322578434550943`*^9, 3.7322578554377794`*^9}, {3.732257911253972*^9, 
    3.7322579118520064`*^9}, {3.732258119986911*^9, 3.732258151124692*^9}, {
-   3.7322589705375595`*^9, 3.732258972381665*^9}}]
+   3.7322589705375595`*^9, 3.732258972381665*^9}, {3.73225913996025*^9, 
+   3.732259176796357*^9}, {3.7322650270029697`*^9, 3.7322650997881327`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7322650246358347`*^9, 3.7322650247448406`*^9}}]
 },
 WindowSize->{704, 822},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
@@ -1308,7 +1418,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 55687, 1267, 5712, "Input"]
+Cell[678, 24, 60091, 1373, 6192, "Input"],
+Cell[60772, 1399, 150, 2, 72, "Input"]
 }
 ]
 *)

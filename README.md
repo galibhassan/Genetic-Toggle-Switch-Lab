@@ -71,3 +71,12 @@
 			- the column for OD - subtraction
  	Out : 	a growthRate.txt and grrowthRateErr.txt in the document folder;
 
+
+
+## New for the GFP RFP analysis
+
+#### normalizeByInitialColValue[`matrix:dataMat`]
+
+	In :	a dataMatrix,
+ 	Out :	a new datamatrix every column of which is divided by the initial value of that column;
+  
