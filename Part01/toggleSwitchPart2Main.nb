@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     64082,       1467]
-NotebookOptionsPosition[     63801,       1453]
-NotebookOutlinePosition[     64143,       1468]
-CellTagsIndexPosition[     64100,       1465]
+NotebookDataLength[     72913,       1688]
+NotebookOptionsPosition[     72632,       1674]
+NotebookOutlinePosition[     72974,       1689]
+CellTagsIndexPosition[     72931,       1686]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,6 +38,10 @@ Cell[BoxData[
      "\"\<D:\\\\labs\\\\toggle switch\\\\gitRepo\\\\Part01\\\\\>\""}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
+    RowBox[{"odData", " ", "=", " ", 
+     RowBox[{"importDataFrom", "[", "\"\<OD600.txt\>\"", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"gfpData", " ", "=", " ", 
      RowBox[{"importDataFrom", "[", "\"\<GFP.txt\>\"", "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
@@ -57,7 +61,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"plotIdPosition", " ", "=", " ", 
      RowBox[{"{", 
-      RowBox[{"7000", ",", "5"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+      RowBox[{"7000", ",", "10"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"plotInfo", " ", "=", " ", "\"\<GFP RFP corrected\>\""}], ";"}], 
    "\[IndentingNewLine]", 
@@ -1306,6 +1310,219 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"Return", "[", "tempDataMat", "]"}], ";"}]}], 
         "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{"OD", " ", "dataMatrix", " ", 
+        RowBox[{"(", 
+         RowBox[{"corrected", " ", "or", " ", "uncorrected"}], ")"}]}]}]}], 
+     ",", "\[IndentingNewLine]", "\t", 
+     RowBox[{"Out", ":", " ", 
+      RowBox[{"only", " ", "7", "x96", " ", "numeric", " ", "matrix"}]}]}], 
+    "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"makeNumberOnlyODData", "[", "odData_", "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{"Return", " ", "[", "\[IndentingNewLine]", 
+       RowBox[{"Transpose", "[", "\[IndentingNewLine]", 
+        RowBox[{"Drop", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Transpose", "[", " ", "\[IndentingNewLine]", 
+           RowBox[{"Delete", "[", 
+            RowBox[{"odData", ",", "1"}], "]"}], "]"}], ",", "3"}], "]"}], 
+        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}], 
+      "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{"a", " ", "protein", " ", "dataMatrix", " ", 
+        RowBox[{"(", 
+         RowBox[{"corrected", " ", "or", " ", "uncorrected"}], ")"}]}]}]}], 
+     ",", "\[IndentingNewLine]", "\t", 
+     RowBox[{"Out", ":", " ", 
+      RowBox[{"only", " ", "7", "x96", " ", "numeric", " ", "matrix"}]}]}], 
+    "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"makeNumberOnlyProteinData", "[", "proteinData_", "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{"Return", " ", "[", "\[IndentingNewLine]", 
+       RowBox[{"Transpose", "[", "\[IndentingNewLine]", 
+        RowBox[{"Drop", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Transpose", "[", " ", "\[IndentingNewLine]", 
+           RowBox[{"Delete", "[", 
+            RowBox[{"proteinData", ",", "1"}], "]"}], "]"}], ",", "4"}], 
+         "]"}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}], 
+      "\[IndentingNewLine]", ")"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "-"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}\
+]}]}], ";", "\[IndentingNewLine]", "\t", 
+      RowBox[{"In", ":", " ", 
+       RowBox[{"a", " ", "protein", " ", "dataMatrix"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"an", " ", "OD", " ", "datamatrix"}], ";", 
+      "\[IndentingNewLine]", "\t", 
+      RowBox[{"Out", ":", " ", 
+       RowBox[{
+       "proteinData", " ", "devided", " ", "by", " ", "odData"}]}]}]}], 
+    "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"DevideElementWise", "[", 
+      RowBox[{"proteinData_", ",", " ", "odData_"}], "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Block", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"tempDataMat", ",", " ", "numOfCol", ",", " ", "numOfRow"}],
+           "}"}], ",", " ", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"numOfCol", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"Dimensions", "[", "proteinData", "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"numOfRow", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"Dimensions", "[", "proteinData", "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"tempDataMat", " ", "=", " ", "proteinData"}], ";", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"For", "[", 
+           RowBox[{
+            RowBox[{"i", "=", "2"}], ",", " ", 
+            RowBox[{"i", "<", 
+             RowBox[{"numOfRow", "+", "1"}]}], ",", " ", 
+            RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"For", "[", 
+              RowBox[{
+               RowBox[{"j", "=", "5"}], ",", " ", 
+               RowBox[{"j", "<", 
+                RowBox[{"numOfCol", "+", "1"}]}], ",", " ", 
+               RowBox[{"j", "++"}], ",", " ", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"odData", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"j", "-", "1"}]}], "]"}], "]"}], "\[NotEqual]", 
+                   " ", "0"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"tempDataMat", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], " ", "=", " ", 
+                    RowBox[{
+                    RowBox[{"proteinData", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "/", 
+                    RowBox[{"odData", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"j", "-", "1"}]}], "]"}], "]"}]}]}], ";"}]}], 
+                 "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]",
+               "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", "tempDataMat", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
     ";"}]}]}]], "Input",
  CellChangeTimes->{{3.728851790403798*^9, 3.728851826316852*^9}, 
    3.72885187208747*^9, {3.7288519194421787`*^9, 3.7288519420244703`*^9}, {
@@ -1449,9 +1666,13 @@ Cell[BoxData[
    3.7322695505186996`*^9, 3.7322696075669627`*^9}, 3.73226963898176*^9, {
    3.732269695263979*^9, 3.7322697125629683`*^9}, {3.7322698630615764`*^9, 
    3.7322698648266773`*^9}, 3.732269922687987*^9, {3.732269973980921*^9, 
-   3.7322700105280113`*^9}, {3.7322701011011915`*^9, 3.732270133401039*^9}}]
+   3.7322700105280113`*^9}, {3.7322701011011915`*^9, 3.732270142009531*^9}, {
+   3.7322704631689005`*^9, 3.7322704867552495`*^9}, {3.732270575355317*^9, 
+   3.7322705794855537`*^9}, {3.732272773551047*^9, 3.732272863544194*^9}, {
+   3.732272904334527*^9, 3.73227290526058*^9}, {3.732273364814865*^9, 
+   3.7322734338808155`*^9}}]
 },
-WindowSize->{876, 822},
+WindowSize->{704, 822},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
@@ -1468,7 +1689,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 63119, 1427, 6132, "Input"]
+Cell[678, 24, 71950, 1648, 7492, "Input"]
 }
 ]
 *)
