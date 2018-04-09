@@ -64,3 +64,10 @@
 		- an amplification factor (since growth rate are very small);
  	Out :	slope value of the linear fit, i.e. the growth-rate for the user-given column.
 
+
+
+#### growthRateAndErrorExport[`matrix:dataMat`, `int:subtructColOD`]
+	In :	- a dataMatrix, 
+			- the column for OD - subtraction
+ 	Out : 	a growthRate.txt and grrowthRateErr.txt in the document folder;
+
