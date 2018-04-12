@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     74853,       1720]
-NotebookOptionsPosition[     74572,       1706]
-NotebookOutlinePosition[     74914,       1721]
-CellTagsIndexPosition[     74871,       1718]
+NotebookDataLength[     74749,       1716]
+NotebookOptionsPosition[     74467,       1702]
+NotebookOutlinePosition[     74810,       1717]
+CellTagsIndexPosition[     74767,       1714]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -50,18 +50,12 @@ Cell[BoxData[
      RowBox[{"importDataFrom", "[", "\"\<mcherry.txt\>\"", "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"plotRangeInput", " ", "=", " ", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"0", ",", "14000"}], "}"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"0", ",", "12"}], "}"}]}], "}"}]}], ";"}], 
+    RowBox[{"plotRangeInput", " ", "=", " ", "All"}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"plotIdPosition", " ", "=", " ", 
      RowBox[{"{", 
-      RowBox[{"7000", ",", "40000"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+      RowBox[{"7000", ",", "7"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"plotInfo", " ", "=", " ", "\"\<(GFP+RFP)/OD raw\>\""}], ";"}], 
    "\[IndentingNewLine]", 
@@ -564,16 +558,16 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"plot01", " ", "=", " ", 
            RowBox[{"generateSinglePlotWithColor", "[", 
-            RowBox[{"timeArray01", ",", " ", 
-             RowBox[{"Log", "[", "array01AtColNum", "]"}], ",", " ", "plotID",
-              ",", " ", "plotRangeInput", ",", " ", "gfpPlotColor"}], "]"}]}],
-           ";", "\[IndentingNewLine]", 
+            RowBox[{
+            "timeArray01", ",", " ", "array01AtColNum", ",", " ", "plotID", 
+             ",", " ", "plotRangeInput", ",", " ", "gfpPlotColor"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"plot02", " ", "=", " ", 
            RowBox[{"generateSinglePlotWithColor", "[", 
-            RowBox[{"timeArray02", ",", " ", 
-             RowBox[{"Log", "[", "array02AtColNum", "]"}], ",", " ", "plotID",
-              ",", " ", "plotRangeInput", ",", " ", "rfpPlotColor"}], "]"}]}],
-           ";", "\[IndentingNewLine]", 
+            RowBox[{
+            "timeArray02", ",", " ", "array02AtColNum", ",", " ", "plotID", 
+             ",", " ", "plotRangeInput", ",", " ", "rfpPlotColor"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"combinedPlot", " ", "=", " ", 
            RowBox[{"Show", "[", 
             RowBox[{"{", 
@@ -1009,14 +1003,14 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"logYdt", " ", "=", " ", "ydt"}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{"For", "[", 
+          RowBox[{"For", "[", 
+           RowBox[{
+            RowBox[{"i", "=", "1"}], ",", " ", 
+            RowBox[{"i", "<", 
+             RowBox[{
+              RowBox[{"Length", "[", "ydt", "]"}], "+", "1"}]}], ",", " ", 
+            RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
             RowBox[{
-             RowBox[{"i", "=", "1"}], ",", " ", 
-             RowBox[{"i", "<", 
-              RowBox[{
-               RowBox[{"Length", "[", "ydt", "]"}], "+", "1"}]}], ",", " ", 
-             RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
              RowBox[{"If", "[", 
               RowBox[{
                RowBox[{
@@ -1024,16 +1018,16 @@ Cell[BoxData[
                ",", " ", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{"logYdt", "[", "i", "]"}], " ", "=", " ", 
-                RowBox[{"Log", "[", "ydt", "]"}]}], ","}], 
-              "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
-            "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
-           RowBox[{"ft", " ", "=", " ", 
-            RowBox[{"LinearModelFit", "[", 
-             RowBox[{
-              RowBox[{"Thread", "[", 
-               RowBox[{"{", 
-                RowBox[{"xdt", ",", "ydt"}], "}"}], "]"}], ",", "x", ",", 
-              "x"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+                RowBox[{"Log", "[", "ydt", "]"}]}]}], "\[IndentingNewLine]", 
+              "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ft", " ", "=", " ", 
+           RowBox[{"LinearModelFit", "[", 
+            RowBox[{
+             RowBox[{"Thread", "[", 
+              RowBox[{"{", 
+               RowBox[{"xdt", ",", "logYdt"}], "}"}], "]"}], ",", "x", ",", 
+             "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"slope", " ", "=", " ", 
            RowBox[{
             RowBox[{
@@ -1702,10 +1696,12 @@ Cell[BoxData[
    3.732278662072851*^9, 3.7322786633529243`*^9}, {3.732280359238923*^9, 
    3.732280373532741*^9}, {3.7322804168492184`*^9, 3.7322805032011576`*^9}, {
    3.732280540381284*^9, 3.732280546227618*^9}, {3.7322806504045773`*^9, 
-   3.7322806713027725`*^9}, {3.732280707869864*^9, 3.732280923218181*^9}}]
+   3.7322806713027725`*^9}, {3.732280707869864*^9, 3.732280952684867*^9}, {
+   3.7324712106826115`*^9, 3.7324712195691195`*^9}, {3.7324719723211746`*^9, 
+   3.732471980615649*^9}, {3.732472067089595*^9, 3.7324720690097046`*^9}}]
 },
-WindowSize->{704, 822},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
+WindowSize->{704, 736},
+WindowMargins->{{28, Automatic}, {8, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1721,7 +1717,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 118, 2, 31, "Input"],
-Cell[678, 24, 73890, 1680, 7632, "Input"]
+Cell[678, 24, 73785, 1676, 7612, "Input"]
 }
 ]
 *)

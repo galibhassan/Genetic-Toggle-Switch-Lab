@@ -1,0 +1,102 @@
+\documentclass[11pt]{book}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{a4wide}
+
+
+
+\begin{document}
+\chapter{Results}
+\section{Set up}
+We started our experiment with 4 wells containing 2mM IPTG and 4 wells containing 100 ng/ml aTc with glucose M9 and chloramphenicol. We then added another set of 8 wells containing the same content but making the amount half to the previous set. We repeated the process several times and thus achieve a concentration gradient of IPTG and aTc shown in figure (\ref{concGrad}). 
+
+We also had two overnight cultures (ONC1 and ONC2) of \textit{E. Coli} bacteria where ONC1 and ONC2 were in \textit{green} and \textit{red} states respectively, and also with a wild type MG1655 bacteria. We inoculated the IPTG and aTc wells with these bacteria. 
+
+\section{Optical density and growth rate measurement}
+The data that was achieved from the experiment provided us with the optical density (OD)of the cultures showed in figure (\ref{concGrad}). We measured the OD of each cell over time to observe if it shows the exponential nature of the bacterial growth rate. Since linearity in the logarithm scale is equivalent to the  exponentiality in the usual scale, we generated a logarithmic plot against time for each well. Figure (\ref{ODLogPlot}) shows these plots in detail.
+
+OD can be treated as a good measure of bacterial growth rate since it increases with the number of bacteria. We subtracted the OD containing no bacteria from OD's of all cultures and generated the plots1. 
+
+It is noticeable that the concentration of IPTG in A1-B8 and E1-F8 wells did not affect the growth rate much. This is desirable because we put the wild type MG1655 bacteria there, which can grow irrespective of the supplied media. 
+
+C1-D8 and G1-H8 wells, where we mixed the ONC1 and ONC2 bacteria respectively show a similar exponential growthrate at least up to 10000 seconds from the experiment started. However, we expected to see stiffer curves in the right portion of of the plot-grid and flatter in the left portion which would signify the concentration gradient of the medium. From our data, it is not very clear if the concentration gradient affected the growth-rate significantly. 
+
+
+
+We applied a linear fit on each of these data-sets and quantified the growth-rate as the slope of the linear fit. 
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{ONC1growthrate.pdf}
+\caption{ONC1}
+\label{fig:GrowthrateODONC1}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{ONC2growthrate.pdf}
+\caption{ONC2}
+\label{fig:GrowthrateODONC2}
+\end{figure}
+
+Figures \ref{fig:GrowthrateODONC1} and \ref{fig:GrowthrateODONC2} represent the plots of growth-rates at different time vs IPTG (or aTc) concentrations. We see that the data for wild type bacteria (denoted in blue) is consistent for the reason mentioned previously, where for the ONC's, it is not satisfactory. 
+
+\section{GFP and RFP intensities and switching rate}
+Besides OD, we also measured the fluorescence intensities of the green- and the red- fluorescent proteins (GFP and RFP) in the ONC1 and ONC2 respectively over time. The data for both are not initially comparable. So first we chose background intensities for each ONC's, subtracted them and normalized them by their intensities at initial values (at the beginning of the experiment). Figure \ref{fig:GfpRfpByOD} shows the details about this, where we plotted the GFP/OD and the RFP/OD (denoted green and red respectively) over time. Since OD can be also a good measure for cell-volume, hence GFP/OD and RFP/OD can be interpreted as fluorescence intensities per cell. 
+
+Similar to the OD case, we applied an exponential fit (i.e. a linear fit with logarithmic vertical axis) on the GFP and RFP data and obtained the switching rates. 
+
+\begin{figure}[h]
+\includegraphics[scale=0.8, angle=-90, origin=c]{}
+\caption{Concentration gradient of IPTG and aTc}
+\label{concGrad}
+\end{figure}
+
+
+
+
+\pagebreak
+\chapter{Appendix}
+
+\begin{figure}[h]
+\includegraphics[scale=0.8, angle=-90, origin=c]{concentrationGradient}
+\caption{Concentration gradient of IPTG and aTc}
+\label{concGrad}
+\end{figure}
+
+\pagebreak
+
+\begin{figure}[h]
+\includegraphics[scale=1.7, angle=-90, origin=c]{OD-LogPlot.pdf}
+\caption{
+Optical Density of each well in figure \ref{concGrad} (measured over time from 0 to 14000 seconds in horizontal axes). The Vertical axes are logarithmic.}
+\label{ODLogPlot}
+\end{figure}
+
+
+\begin{figure}[h]
+\includegraphics[scale=1.7, angle=-90, origin=c]{GfpPlusRfpByODCorrectedYMax80000.pdf}
+\caption{
+GFP/OD and RFP/OD. over time. The Vertical axes are logarithmic.}
+\label{fig:GfpRfpByOD}
+\end{figure}
+
+
+
+\pagebreak
+
+\begin{figure}[h]
+\includegraphics[scale=1.7, angle=-90, origin=c]{LogGfpPlusRfpByODCorrectedYMax12.pdf}
+\caption{
+GFP/OD and RFP/OD. over time. The Vertical axes are logarithmic.}
+\label{fig:GfpRfpByODLog}
+\end{figure}
+
+
+
+\end{document}
