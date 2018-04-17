@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.23)  12 APR 2018 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.23)  17 APR 2018 09:40
 entering extended mode
 **"./genetic toggle switch results.tex"
 ("genetic toggle switch results.tex"
@@ -244,18 +244,144 @@ Package pdftex.def Info: ONC2growthrate.pdf used on input line 42.
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 <./ONC1growthrate.pdf>
  <./ONC2growthrate.pdf>]
+<ONC1switchrate.pdf, id=20, 421.575pt x 316.95113pt>
+File: ONC1switchrate.pdf Graphic file (type pdf)
+ <use ONC1switchrate.pdf>
+Package pdftex.def Info: ONC1switchrate.pdf used on input line 58.
+(pdftex.def)             Requested size: 337.26045pt x 253.56122pt.
+
+<ONC2switchrate.pdf, id=21, 421.575pt x 316.95113pt>
+File: ONC2switchrate.pdf Graphic file (type pdf)
+ <use ONC2switchrate.pdf>
+Package pdftex.def Info: ONC2switchrate.pdf used on input line 65.
+(pdftex.def)             Requested size: 337.26045pt x 253.56122pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3]
-[4
+ [3 <./ONC1switchrate.pdf>] <greenstate008Composite.jpg, id=28, 2055.68pt x 205
+1.665pt>
+File: greenstate008Composite.jpg Graphic file (type jpg)
+
+<use greenstate008Composite.jpg>
+Package pdftex.def Info: greenstate008Composite.jpg used on input line 84.
+(pdftex.def)             Requested size: 199.19283pt x 198.79213pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 87.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 87.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<redstate014Composite.jpg, id=29, 2055.68pt x 2051.665pt>
+File: redstate014Composite.jpg Graphic file (type jpg)
+
+<use redstate014Composite.jpg>
+Package pdftex.def Info: redstate014Composite.jpg used on input line 90.
+(pdftex.def)             Requested size: 199.19283pt x 198.79213pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<d8007LateComposite.jpg, id=30, 2055.68pt x 2051.665pt>
+File: d8007LateComposite.jpg Graphic file (type jpg)
+
+<use d8007LateComposite.jpg>
+Package pdftex.def Info: d8007LateComposite.jpg used on input line 101.
+(pdftex.def)             Requested size: 199.19283pt x 198.79213pt.
+
+<h8LateComposite.jpg, id=31, 2055.68pt x 2051.665pt>
+File: h8LateComposite.jpg Graphic file (type jpg)
+ <use h8LateComposite.jpg>
+Package pdftex.def Info: h8LateComposite.jpg used on input line 107.
+(pdftex.def)             Requested size: 199.19283pt x 198.79213pt.
+
+Underfull \vbox (badness 1931) has occurred while \output is active []
+
+ [4 <./ONC2switchrate.pdf>]
+
+pdfTeX warning: pdflatex (file ./greenstate008GFP.pdf): PDF inclusion: found PD
+F version <1.6>, but at most version <1.5> allowed
+<greenstate008GFP.pdf, id=38, 361.35pt x 226.83948pt>
+File: greenstate008GFP.pdf Graphic file (type pdf)
+
+<use greenstate008GFP.pdf>
+Package pdftex.def Info: greenstate008GFP.pdf used on input line 124.
+(pdftex.def)             Requested size: 199.19283pt x 125.04591pt.
+
+<greenstate008RFP.pdf, id=39, 361.35pt x 226.83948pt>
+File: greenstate008RFP.pdf Graphic file (type pdf)
+
+<use greenstate008RFP.pdf>
+Package pdftex.def Info: greenstate008RFP.pdf used on input line 130.
+(pdftex.def)             Requested size: 199.19283pt x 125.04591pt.
+ <redstate014GFP.pdf, id=40, 361.35pt x 225.23347pt>
+File: redstate014GFP.pdf Graphic file (type pdf)
+
+<use redstate014GFP.pdf>
+Package pdftex.def Info: redstate014GFP.pdf used on input line 140.
+(pdftex.def)             Requested size: 199.19283pt x 124.1606pt.
+ <redstate014RFP.pdf, id=41, 361.35pt x 225.23347pt>
+File: redstate014RFP.pdf Graphic file (type pdf)
+
+<use redstate014RFP.pdf>
+Package pdftex.def Info: redstate014RFP.pdf used on input line 146.
+(pdftex.def)             Requested size: 199.19283pt x 124.1606pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<d8007GFP.pdf, id=42, 361.35pt x 225.23347pt>
+File: d8007GFP.pdf Graphic file (type pdf)
+ <use d8007GFP.pdf>
+Package pdftex.def Info: d8007GFP.pdf used on input line 157.
+(pdftex.def)             Requested size: 199.19283pt x 124.1606pt.
+
+<d8007RFP.pdf, id=43, 361.35pt x 225.23347pt>
+File: d8007RFP.pdf Graphic file (type pdf)
+ <use d8007RFP.pdf>
+Package pdftex.def Info: d8007RFP.pdf used on input line 163.
+(pdftex.def)             Requested size: 199.19283pt x 124.1606pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<h8LateGFP.pdf, id=44, 361.35pt x 225.23347pt>
+File: h8LateGFP.pdf Graphic file (type pdf)
+ <use h8LateGFP.pdf>
+Package pdftex.def Info: h8LateGFP.pdf used on input line 174.
+(pdftex.def)             Requested size: 199.19283pt x 124.1606pt.
+
+<h8LateRFP.pdf, id=45, 361.35pt x 225.23347pt>
+File: h8LateRFP.pdf Graphic file (type pdf)
+ <use h8LateRFP.pdf>
+Package pdftex.def Info: h8LateRFP.pdf used on input line 180.
+(pdftex.def)             Requested size: 199.19283pt x 124.1606pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./greenstate008Composite.jpg> <./redstate014Composite.jpg>] [6 <./d8007Lat
+eComposite.jpg> <./h8LateComposite.jpg> <./greenstate008GFP.pdf> <./greenstate0
+08RFP.pdf>] [7 <./redstate014GFP.pdf> <./redstate014RFP.pdf> <./d8007GFP.pdf> <
+./d8007RFP.pdf> <./h8LateGFP.pdf> <./h8LateRFP.pdf>] [8
 
 ]
 Chapter 2.
-<concentrationGradient.pdf, id=26, 745.687pt x 401.57729pt>
+<concentrationGradient.pdf, id=109, 745.687pt x 401.57729pt>
 File: concentrationGradient.pdf Graphic file (type pdf)
 
 <use concentrationGradient.pdf>
-Package pdftex.def Info: concentrationGradient.pdf used on input line 60.
+Package pdftex.def Info: concentrationGradient.pdf used on input line 213.
 (pdftex.def)             Requested size: 596.5504pt x 321.26225pt.
 
 
@@ -264,67 +390,72 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
-<OD-LogPlot.pdf, id=30, 361.35pt x 239.38133pt>
+ [9]
+<OD-LogPlot.pdf, id=113, 361.35pt x 239.38133pt>
 File: OD-LogPlot.pdf Graphic file (type pdf)
  <use OD-LogPlot.pdf>
-Package pdftex.def Info: OD-LogPlot.pdf used on input line 68.
+Package pdftex.def Info: OD-LogPlot.pdf used on input line 221.
 (pdftex.def)             Requested size: 614.29239pt x 406.94652pt.
 
 
-LaTeX Warning: Float too large for page by 14.8921pt on input line 72.
+LaTeX Warning: Float too large for page by 14.8921pt on input line 225.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<GfpPlusRfpByODCorrectedYMax80000.pdf, id=31, 361.35pt x 239.38133pt>
+<GfpPlusRfpByODCorrectedYMax80000.pdf, id=114, 361.35pt x 239.38133pt>
 File: GfpPlusRfpByODCorrectedYMax80000.pdf Graphic file (type pdf)
 
 <use GfpPlusRfpByODCorrectedYMax80000.pdf>
 Package pdftex.def Info: GfpPlusRfpByODCorrectedYMax80000.pdf used on input lin
-e 76.
+e 229.
 (pdftex.def)             Requested size: 614.29239pt x 406.94652pt.
 
 
-LaTeX Warning: Float too large for page by 1.2921pt on input line 80.
+LaTeX Warning: Float too large for page by 1.2921pt on input line 233.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<LogGfpPlusRfpByODCorrectedYMax12.pdf, id=32, 361.35pt x 239.38133pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+<LogGfpPlusRfpByODCorrectedYMax12.pdf, id=118, 361.35pt x 239.38133pt>
 File: LogGfpPlusRfpByODCorrectedYMax12.pdf Graphic file (type pdf)
 
 <use LogGfpPlusRfpByODCorrectedYMax12.pdf>
 Package pdftex.def Info: LogGfpPlusRfpByODCorrectedYMax12.pdf used on input lin
-e 87.
+e 240.
 (pdftex.def)             Requested size: 614.29239pt x 406.94652pt.
 
 
-LaTeX Warning: Float too large for page by 1.2921pt on input line 91.
+LaTeX Warning: Float too large for page by 1.2921pt on input line 244.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 <./concentrationGradient.pdf>] [7 <./OD-LogPlot.pdf>] [8 <./GfpPlusRfpByODCo
-rrectedYMax80000.pdf>] [9 <./LogGfpPlusRfpByODCorrectedYMax12.pdf>]
+[11 <./concentrationGradient.pdf>] [12 <./OD-LogPlot.pdf>] [13 <./GfpPlusRfpByO
+DCorrectedYMax80000.pdf>] [14 <./LogGfpPlusRfpByODCorrectedYMax12.pdf>]
 ("genetic toggle switch results.aux") ) 
 Here is how much of TeX's memory you used:
- 3535 strings out of 493323
- 52423 string characters out of 3139057
- 114715 words of memory out of 3000000
- 7046 multiletter control sequences out of 15000+200000
- 6157 words of font info for 22 fonts, out of 3000000 for 9000
+ 3665 strings out of 493323
+ 54970 string characters out of 3139057
+ 117914 words of memory out of 3000000
+ 7143 multiletter control sequences out of 15000+200000
+ 11110 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,39p,722b,265s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,8n,39p,722b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
-0.pfb>
-Output written on "genetic toggle switch results.pdf" (9 pages, 2772507 bytes).
-
+amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "genetic toggle switch results.pdf" (14 pages, 11938737 bytes
+).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 200 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

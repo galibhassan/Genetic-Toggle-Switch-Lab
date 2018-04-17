@@ -1,0 +1,215 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      8113,        206]
+NotebookOptionsPosition[      7719,        189]
+NotebookOutlinePosition[      8061,        204]
+CellTagsIndexPosition[      8018,        201]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Quit", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.7325531725292892`*^9, 3.732553173683691*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "workingDirectory", " ", "=", " ", 
+   "\"\<D:\\\\labs\\\\toggle \
+switch\\\\2017-12-14_Gr05\\\\greenState\\\\\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.7325530878679404`*^9, 3.732553117227192*^9}, {
+  3.732553413159712*^9, 3.7325534142361135`*^9}, {3.7328535652615776`*^9, 
+  3.732853566729661*^9}, {3.732882247541894*^9, 3.7328822653795257`*^9}, {
+  3.7328839585391026`*^9, 3.732883964623113*^9}, {3.7328840376156416`*^9, 
+  3.732884041422048*^9}, {3.7328841859479027`*^9, 3.732884187960306*^9}, {
+  3.732934663558172*^9, 3.732934665236268*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"--", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"API", " ", "--"}], "--"}], "--"}], "--"}]}]}]}]}]}], 
+   "--"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.7328534935824776`*^9, 3.732853509953414*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Importing", " ", "data"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"importDataFrom", "[", "fileName_", "]"}], ":=", " ", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Block", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", "Data", "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Data", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"Import", "[", 
+             RowBox[{
+              RowBox[{"workingDirectory", "<>", " ", "fileName"}], ",", " ", 
+              "\"\<Table\>\""}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"2", ";;", 
+              RowBox[{"-", "2"}]}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", "Data", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"importMeanDataFrom", "[", "fileName_", "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Block", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"data", ",", " ", "dataMat"}], "}"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"dataMat", " ", "=", "  ", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{"importDataFrom", "[", "fileName", "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"data", " ", "=", 
+           RowBox[{"dataMat", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", " ", "3"}], "]"}], "]"}]}], " ", ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", "data", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Generating", " ", "histogram"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"makeHistogram", "[", 
+      RowBox[{
+      "data_", ",", " ", "plotRange_", ",", "plotColor_", ",", "  ", 
+       "plotLabel_", ",", " ", "histoBin_"}], "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Block", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", "plot", "}"}], ",", " ", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"plot", " ", "=", " ", 
+           RowBox[{"Histogram", "[", "\[IndentingNewLine]", 
+            RowBox[{
+            "data", ",", "\[IndentingNewLine]", "histoBin", ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"PlotRange", "\[Rule]", "plotRange"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"AxesOrigin", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}]}], ",", " ", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Frame", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"ChartStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "plotColor", "}"}], " ", ",", " ", 
+                RowBox[{"EdgeForm", "[", "None", "]"}]}], "}"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"PlotLabel", "\[Rule]", "plotLabel"}]}], 
+            "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Return", "[", "plot", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", ")"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{
+  3.7325543949174037`*^9, {3.7325550697570024`*^9, 3.732555108925243*^9}, {
+   3.7325551644244175`*^9, 3.7325553117668447`*^9}, {3.7325568826556945`*^9, 
+   3.7325568867739296`*^9}, {3.7325569519716587`*^9, 3.732556994265078*^9}, {
+   3.732557249060652*^9, 3.7325572781253138`*^9}, {3.7325573283851886`*^9, 
+   3.732557330446306*^9}, {3.7325573743718185`*^9, 3.732557453610351*^9}, {
+   3.732557505762334*^9, 3.7325575888940887`*^9}, {3.7325576256131887`*^9, 
+   3.7325576352007375`*^9}, {3.7325577006704817`*^9, 
+   3.7325577055827627`*^9}, {3.732557899482854*^9, 3.732557900945937*^9}, {
+   3.7328534381723084`*^9, 3.732853440143421*^9}, {3.732854186403105*^9, 
+   3.732854200741925*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"inStatePercentage", "[", 
+   RowBox[{"data_", ",", " ", "threshold_"}], "]"}], ":=", 
+  RowBox[{"(", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Block", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"inState", ",", " ", "inStatePercentageReturn"}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"inState", " ", "=", "  ", 
+        RowBox[{"Select", "[", 
+         RowBox[{"data", ",", 
+          RowBox[{
+           RowBox[{"#", "<", "threshold"}], "&"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"inStatePercentageReturn", " ", "=", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "inState", "]"}], " ", "/", " ", 
+          RowBox[{"Length", "[", "data", "]"}]}], " ", "*", " ", "100"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", 
+        RowBox[{"inStatePercentageReturn", "//", "N"}], "]"}], ";"}]}], 
+     "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.7329347613437653`*^9, 3.7329347924985476`*^9}, {
+  3.732934866711792*^9, 3.73293502332975*^9}, {3.732935165158862*^9, 
+  3.73293516616992*^9}, {3.7329352350628605`*^9, 3.7329352385430593`*^9}, {
+  3.7329353176375837`*^9, 3.7329353803651714`*^9}, {3.7329354266258173`*^9, 
+  3.732935481199939*^9}, {3.732935521393238*^9, 3.7329355492168293`*^9}, {
+  3.7329357922107277`*^9, 3.7329358221064377`*^9}, {3.7329359900840454`*^9, 
+  3.732936060423068*^9}, {3.732936143948846*^9, 3.732936203629259*^9}, {
+  3.7329362345660286`*^9, 3.7329362480848017`*^9}}]
+},
+WindowSize->{704, 822},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 120, 2, 31, "Input"],
+Cell[680, 24, 589, 11, 52, "Input"],
+Cell[1272, 37, 380, 13, 31, "Input"],
+Cell[1655, 52, 4419, 98, 732, "Input"],
+Cell[6077, 152, 1638, 35, 172, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -51,12 +51,158 @@ Besides OD, we also measured the fluorescence intensities of the green- and the 
 
 Similar to the OD case, we applied an exponential fit (i.e. a linear fit with logarithmic vertical axis) on the GFP and RFP data and obtained the switching rates. 
 
+
+
 \begin{figure}[h]
-\includegraphics[scale=0.8, angle=-90, origin=c]{}
-\caption{Concentration gradient of IPTG and aTc}
-\label{concGrad}
+\centering
+\includegraphics[scale=0.8]{ONC1switchrate.pdf}
+\caption{}
+\label{fig:onc1SwitchRate}
 \end{figure}
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{ONC2switchrate.pdf}
+\caption{}
+\label{fig:onc2SwitchRate}
+\end{figure}
+
+Figure \ref{fig:onc1SwitchRate} and \ref{fig:onc2SwitchRate} summarizes the switching rates obtained from the data. 
+
+\pagebreak
+\section{Single cell fluorescence}
+In this part, we took pictures of several bacteria with a microscope and analyzed them. The goal was to observe the switching of the bacterial states by dint of  GFP and RFP intensities. We used \textit{Fiji}, an image processing software to measure the single cell fluorescence of each bacterium in the image. 
+
+\subsection{Composite images}
+The following composite images show the green and red fluorescence intensities of ONC1 and ONC2 in different states. 
+
+%--------------green state------------------
+\begin{figure}[h]
+\centering
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{greenstate008Composite.jpg}
+  		\captionof{figure}{ONC1 in Green State }
+  		\label{fig:onc1GreenStateComposite}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{redstate014Composite.jpg}
+  		\captionof{figure}{ONC2 in Red State}
+  		\label{fig:onc1RedStateComposite}  
+	\end{minipage}
+\end{figure}
+
+%--------------green state------------------
+\begin{figure}
+\centering
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{d8007LateComposite.jpg}
+  		\captionof{figure}{ONC1 after several hours }
+  		\label{fig:onc1AfterHoursComposite}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{h8LateComposite.jpg}
+  		\captionof{figure}{ONC2 after several hours}
+  		\label{fig:onc2AfterHoursComposite}  
+	\end{minipage}
+\end{figure}
+
+At the begining of the experiment, ideally we would expect the ONC1 collection to be completely in green state and the ONC2 in red state. As we can see in the figures \ref{fig:onc1GreenStateComposite} - \ref{fig:onc2AfterHoursComposite}, our samples did not have very strong green and red fluorescence. For the time-evolution, we chose the cultures in the D8 and H8 wells of chart \ref{concGrad}. Both of them were exposed to the highest concentration of IPTG and aTc respectively according to our setup. 
+
+\subsection{Histograms}
+According our image analysis data from Fiji, we quantitatively obtained the green and red fluorescence of the cultures in the images. We generated histograms which indicate a frequency distribution of how many bacteria shine how in which states. 
+
+\pagebreak
+%--------------green state------------------
+\begin{figure}
+\centering
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{greenstate008GFP.pdf}
+  		\captionof{figure}{ONC1 GFP in Green State }
+  		\label{fig:onc1GFPGreenState}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{greenstate008RFP.pdf}
+  		\captionof{figure}{ONC1 RFP in Green State}
+  		\label{fig:onc1RFPGreenState}  
+	\end{minipage}
+\end{figure}
+%--------------red state------------------
+\begin{figure}[h]
+\centering
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{redstate014GFP.pdf}
+  		\captionof{figure}{ONC2 GFP in Red State }
+  		\label{fig:onc2GFPRedState}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{redstate014RFP.pdf}
+  		\captionof{figure}{ONC2 RFP in Red State}
+  		\label{fig:onc2RFPRedState}  
+	\end{minipage}
+\end{figure}
+
+%-----green state after time-evolution ------------------
+\begin{figure}[h]
+\centering
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{d8007GFP.pdf}
+  		\captionof{figure}{ONC1 GFP after several hours }
+  		\label{fig:onc1GFPAfterHours}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{d8007RFP.pdf}
+  		\captionof{figure}{ONC1 RFP after several hours}
+  		\label{fig:onc1RFPAfterHours}  
+	\end{minipage}
+\end{figure}
+
+%-----red state after time-evolution ------------------
+\begin{figure}[h]
+\centering
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{h8LateGFP.pdf}
+  		\captionof{figure}{ONC2 GFP after several hours }
+  		\label{fig:onc2GFPAfterHours}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+  		\centering
+  		\includegraphics[width=.9\linewidth]{h8LateRFP.pdf}
+  		\captionof{figure}{ONC2 RFP after several hours}
+  		\label{fig:onc2RFPAfterHours}  
+	\end{minipage}
+\end{figure}
+
+The first four histograms in the figures \ref{fig:onc1GFPGreenState} - \ref{fig:onc2RFPRedState} show that, most of the  ONC1 bacteria in green state have the high GFP intensity, and ONC2 bacteria have high RFP intensity, as expected. If switching happens, then over a time evolution we would expect the green-state cultures to lose their GFP intensities and red-state cultures to lose their RFP intensities.
+
+The Last four histograms (figures \ref{fig:onc1GFPAfterHours} - \ref{fig:onc2RFPAfterHours}) show that the ONC1 bacteria indeed started losing GFP intensity and gaining the RFP intensity. The opposite happened with the ONC2. So, we can say that the switching started to take place, but was not complete when we reached the end of the experiment. 
+
+\subsection{Switching rate}
+Our observation presents the following result
+
+\begin{table}[h]
+\centering
+\label{switchingRateTable}
+\begin{tabular}{lllll}
+ 	At beginning &  ONC1 &  in Green state	&  97.9730\% $\pm 1\%$ &  \\
+	After 4 hrs	 &  ONC1 &  in Green State 	&  61.6279\% $\pm 1\%$ &  \\
+	At beginning &  ONC2 &  in Red State	&  92.9134\% $\pm 1\%$ &  \\
+	After 4 hrs	 &  ONC2 &  in Red State 	&  80.1762\% $\pm 1\%$ &  \\
+\end{tabular}
+\caption{Observation of switching}
+\end{table}
+
+Hence, approximately $9.1\%$ bacteria switch from Green to Red state in ONC1, and approximately $3.2\%$ bacteria switch from Red to Green state in ONC2. 
 
 
 
@@ -86,7 +232,7 @@ GFP/OD and RFP/OD. over time. The Vertical axes are logarithmic.}
 \label{fig:GfpRfpByOD}
 \end{figure}
 
-
+-
 
 \pagebreak
 
