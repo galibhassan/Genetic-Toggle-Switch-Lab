@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      8161,        207]
-NotebookOptionsPosition[      7767,        190]
-NotebookOutlinePosition[      8109,        205]
-CellTagsIndexPosition[      8066,        202]
+NotebookDataLength[      8899,        228]
+NotebookOptionsPosition[      8433,        208]
+NotebookOutlinePosition[      8775,        223]
+CellTagsIndexPosition[      8732,        220]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,19 +22,37 @@ Cell[BoxData[
  RowBox[{"Quit", "[", "]"}]], "Input",
  CellChangeTimes->{{3.7325531725292892`*^9, 3.732553173683691*^9}}],
 
-Cell[BoxData[
+Cell[CellGroupData[{
+
+Cell[BoxData[{
  RowBox[{
   RowBox[{
   "workingDirectory", " ", "=", " ", 
-   "\"\<D:\\\\labs\\\\toggle switch\\\\2017-12-14_Gr05\\\\redState\\\\\>\""}],
-   ";"}]], "Input",
+   "\"\<D:\\\\labs\\\\toggle \
+switch\\\\gitRepo\\\\Part03\\\\forSimon\\\\redState\>\""}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<redState\>\""}], 
+     "}"}], "]"}], "*)"}]}]}], "Input",
  CellChangeTimes->{{3.7325530878679404`*^9, 3.732553117227192*^9}, {
   3.732553413159712*^9, 3.7325534142361135`*^9}, {3.7328535652615776`*^9, 
   3.732853566729661*^9}, {3.732882247541894*^9, 3.7328822653795257`*^9}, {
   3.7328839585391026`*^9, 3.732883964623113*^9}, {3.7328840376156416`*^9, 
   3.732884041422048*^9}, {3.7328841859479027`*^9, 3.732884187960306*^9}, {
   3.732934663558172*^9, 3.732934665236268*^9}, {3.735369514421795*^9, 
-  3.735369516000885*^9}}],
+  3.735369516000885*^9}, {3.737436355462124*^9, 3.737436467237517*^9}, {
+  3.7374365175843964`*^9, 3.737436518146428*^9}, {3.737436644299644*^9, 
+  3.7374366753444195`*^9}}],
+
+Cell[BoxData["\<\"D:\\\\labs\\\\toggle \
+switch\\\\gitRepo\\\\Part03\\\\forSimon\\\\redState\"\>"], "Output",
+ CellChangeTimes->{{3.737436473086851*^9, 3.7374364847235165`*^9}, 
+   3.7374365208055806`*^9, 3.7374366004011335`*^9}]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{"(*", " ", 
@@ -205,10 +223,13 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 120, 2, 31, "Input"],
-Cell[680, 24, 637, 12, 31, "Input"],
-Cell[1320, 38, 380, 13, 31, "Input"],
-Cell[1703, 53, 4419, 98, 732, "Input"],
-Cell[6125, 153, 1638, 35, 172, "Input"]
+Cell[CellGroupData[{
+Cell[702, 26, 1037, 22, 92, "Input"],
+Cell[1742, 50, 229, 3, 31, "Output"]
+}, Open  ]],
+Cell[1986, 56, 380, 13, 31, "Input"],
+Cell[2369, 71, 4419, 98, 732, "Input"],
+Cell[6791, 171, 1638, 35, 172, "Input"]
 }
 ]
 *)
